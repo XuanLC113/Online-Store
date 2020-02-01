@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.css";
 
 interface Props {
+  cartSize: number;
   cartHandler: () => void;
 }
 
-const NavBar = ({ cartHandler }: Props) => {
+const NavBar = ({ cartSize, cartHandler }: Props) => {
   const [hover, setHover] = useState(false);
+
   return (
     <div className="navbar">
       <ul>
@@ -36,8 +40,11 @@ const NavBar = ({ cartHandler }: Props) => {
           </li>
         </Link>
 
-        <li className="nav-cart" onClick={cartHandler}>
-          Cart
+        <li className="nav-cart" onClick={() => cartHandler()}>
+          <span className="cart-icon">
+            <FontAwesomeIcon icon={faShoppingCart} />
+            <span className="cart-badge">{cartSize}</span>
+          </span>
         </li>
       </ul>
     </div>

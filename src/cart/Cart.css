@@ -1,7 +1,7 @@
 .cart {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
+  right: 1rem;
+  margin: 1rem;
+  max-height: 80%;
   background: gray;
 }

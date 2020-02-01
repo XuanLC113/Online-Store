@@ -18,7 +18,7 @@ const ProductDisplay = ({ product, color, setColor, addToCart }: Props) => {
           <option value={color}>{color}</option>
         ))}
       </select>
-      <button onClick={() => addToCart()}>add to cart</button>
+      <button onClick={addToCart}>add to cart</button>
     </div>
   );
 };

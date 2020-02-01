@@ -6,7 +6,7 @@ import { modifyItem } from "../../cart/CartLogic";
 import ProductDisplay from "./ProductDisplay";
 
 interface Props extends RouteComponentProps<{ id?: string }> {
-  peekCart: () => void;
+  reload: () => void;
 }
 
 const initialProduct: IProductData = {
@@ -23,6 +23,7 @@ const initialProduct: IProductData = {
 const Product: React.FC<Props> = props => {
   const [product, setProduct] = useState(initialProduct);
   const [color, setColor] = useState("");
+
   useEffect(() => {
     const { data }: IData = products_data;
     for (let item of data) {
@@ -32,9 +33,10 @@ const Product: React.FC<Props> = props => {
       }
     }
   }, []);
+
   function addToCart() {
     modifyItem(product, color, 1);
-    props.peekCart();
+    props.reload();
   }
   return (
     <div>
