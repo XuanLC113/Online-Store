@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "id": 12,
+      "sku": 12064273040195392,
+      "title": "earbud sleeved blue",
+      "type": "earbud",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["blue"],
+      "price": 10
+    },
+
+    {
+      "id": 13,
+      "sku": 51498472915966366,
+      "title": "earbud sleeved black",
+      "type": "earbud",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["black"],
+      "price": 20
+    },
+
+    {
+      "id": 14,
+      "sku": 10686354557628303,
+      "title": "earbud sleeved green",
+      "type": "earbud",
+      "style": "wireless",
+      "brand": "jbl",
+      "color": ["green"],
+      "price": 30
+    },
+
+    {
+      "id": 15,
+      "sku": 11033926921508487,
+      "title": "earbud sleeved red black",
+      "type": "earbud",
+      "style": "wired",
+      "brand": "monstercat",
+      "color": ["red", "black"],
+      "price": 40
+    },
+
+    {
+      "id": 11,
+      "sku": 39876704341265606,
+      "title": "long sleeved gray",
+      "type": "earbud",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["gray"],
+      "price": 50
+    },
+
+    {
+      "id": 16,
+      "sku": 10412368723880253,
+      "title": "long sleeved plaid",
+      "type": "earbud",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["black"],
+      "price": 60
+    },
+
+    {
+      "id": 0,
+      "sku": 8552515751438644,
+      "title": "short sleeved black",
+      "type": "headphone",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["black"],
+      "price": 70
+    },
+
+    {
+      "id": 1,
+      "sku": 18644119330491312,
+      "title": "short sleeved blue",
+      "type": "headphone",
+      "style": "wired",
+      "brand": "sony",
+      "color": ["blue"],
+      "price": 80
+    },
+
+    {
+      "id": 2,
+      "sku": 11854078013954528,
+      "title": "short sleeved red",
+      "type": "headphone",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["red"],
+      "price": 90
+    },
+
+    {
+      "id": 3,
+      "sku": 876661122392077,
+      "title": "short sleeved gray",
+      "type": "headphone",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["gray"],
+      "price": 99
+    },
+
+    {
+      "id": 4,
+      "sku": 9197907543445677,
+      "title": "short sleeved plaid",
+      "type": "headphone",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["plaid"],
+      "price": 15
+    },
+
+    {
+      "id": 5,
+      "sku": 10547961582846888,
+      "title": "singlet black",
+      "type": "speaker",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["black"],
+      "price": 25
+    },
+
+    {
+      "id": 6,
+      "sku": 6090484789343891,
+      "title": "singlet blue",
+      "type": "speaker",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["blue"],
+      "price": 35
+    },
+
+    {
+      "id": 7,
+      "sku": 18532669286405342,
+      "title": "singlet red",
+      "type": "speaker",
+      "style": "wired",
+      "brand": "beats",
+      "color": ["red"],
+      "price": 45
+    },
+
+    {
+      "id": 8,
+      "sku": 5619496040738316,
+      "title": "singlet green",
+      "type": "speaker",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["green"],
+      "price": 55
+    },
+
+    {
+      "id": 9,
+      "sku": 11600983276356165,
+      "title": "singlet gray",
+      "type": "speaker",
+      "style": "wired",
+      "brand": "jbl",
+      "color": ["gray"],
+      "price": 75
+    }
+  ]
+}
