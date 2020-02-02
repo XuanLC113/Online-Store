@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./home/Home";
@@ -8,15 +8,28 @@ import StoreHome from "./store/StoreHome";
 import Product from "./store/products/Product";
 import Cart from "./cart/Cart";
 import { openDB } from "./cart/CartLogic";
-import { ICart } from "./data/Interfaces";
+import { ICart, IFilter } from "./data/Interfaces";
+import {
+  filters as initialFilters,
+  reducer
+} from "./store/filters/FilterReducer";
 
 const initialCart: ICart[] = [];
+
+function getinitialFilters(): IFilter {
+  let filterObj = localStorage.getItem("filter");
+  if (filterObj === null) {
+    return initialFilters;
+  }
+  return JSON.parse(filterObj);
+}
 
 const App: React.FC = () => {
   const [cart, setCart] = useState(false);
   const [cartItems, setCartItems] = useState(initialCart);
   const [reloadCart, setReloadCart] = useState(false);
   const [cartSize, setCartSize] = useState(0);
+  const [filter, dispatch] = useReducer(reducer, getinitialFilters());
 
   function reload(): void {
     setReloadCart(prevState => !prevState);
@@ -73,14 +86,20 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <NavBar cartHandler={handleCart} cartSize={cartSize} />
+        <NavBar
+          cartHandler={handleCart}
+          cartSize={cartSize}
+          dispatch={dispatch}
+        />
         {cart && (
           <Cart closeCart={handleCart} cartItems={cartItems} reload={reload} />
         )}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/store/" component={StoreHome} />
-          <Route exact path="/store/:type" component={Store} />
+          <Route exact path="/store/:type" component={Store}>
+            <Store filter={filter} dispatch={dispatch} />
+          </Route>
           <Route path="/store/:type/:id">
             <Product reload={reload} />
           </Route>

@@ -1,31 +1,4 @@
-type AppState = {
-  search: string | number;
-  price1: number;
-  price2: number;
-  sort: string;
-  filter: {
-    style: {
-      wireless: boolean;
-      wired: boolean;
-      [key: string]: boolean;
-    };
-    brand: {
-      jbl: boolean;
-      long: boolean;
-      none: boolean;
-      [key: string]: boolean;
-    };
-    color: {
-      black: boolean;
-      blue: boolean;
-      green: boolean;
-      gray: boolean;
-      plaid: boolean;
-      red: boolean;
-      [key: string]: boolean;
-    };
-  };
-};
+import { IFilter } from "../../data/Interfaces";
 
 type Action =
   | { type: "search"; payload: string | number }
@@ -35,9 +8,10 @@ type Action =
   | { type: "style"; style: string }
   | { type: "brand"; brand: string }
   | { type: "color"; color: string }
+  | { type: "load"; filter: IFilter }
   | { type: "reset" };
 
-const filters: AppState = {
+const filters: IFilter = {
   search: "",
   price1: 0,
   price2: 100,
@@ -63,7 +37,7 @@ const filters: AppState = {
   }
 };
 
-function reducer(state: AppState, action: Action): AppState {
+function reducer(state: IFilter, action: Action): IFilter {
   switch (action.type) {
     case "search":
       return { ...state, search: action.payload };
@@ -112,6 +86,8 @@ function reducer(state: AppState, action: Action): AppState {
           }
         }
       };
+    case "load":
+      return action.filter;
     case "reset":
       return filters;
     default:

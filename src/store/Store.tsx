@@ -1,7 +1,6 @@
-import React, { useState, useReducer, useEffect } from "react";
-import { RouteComponentProps } from "react-router";
+import React, { useState, useEffect, Dispatch } from "react";
+import { RouteComponentProps, withRouter } from "react-router";
 import * as products_data from "../data/products.json";
-import { filters as initialFilters, reducer } from "./filters/FilterReducer";
 import ProductWindow from "./products/ProductWindow";
 import Filter from "./filters/Filter";
 import Sort from "./Sort";
@@ -13,7 +12,10 @@ import {
 } from "../data/Interfaces";
 import "./store.css";
 
-interface Params extends RouteComponentProps<{ type?: string }> {}
+interface Params extends RouteComponentProps<{ type?: string }> {
+  filter: any;
+  dispatch: Dispatch<any>;
+}
 
 const initialFilterOptions: IFilterCriterion = {
   type: [],
@@ -121,10 +123,12 @@ const Store: React.FC<Params> = props => {
   const { data }: IData = products_data;
   const [products, setProducts] = useState(data);
   const [options, setOptions] = useState(initialFilterOptions);
-  const [filter, dispatch] = useReducer(reducer, initialFilters);
 
   useEffect(() => {
-    dispatch({ type: "reset" });
+    localStorage.setItem("filter", JSON.stringify(props.filter));
+  }, [props.filter]);
+
+  useEffect(() => {
     const type = props.match.params.type;
     let products = data.filter(item => item.type === type);
     let options = setFilterOptions(products);
@@ -132,7 +136,7 @@ const Store: React.FC<Params> = props => {
   }, [props.match.params.type]);
 
   useEffect(() => {
-    const filterCriterion: IFilterCriterion = setFilters(filter);
+    const filterCriterion: IFilterCriterion = setFilters(props.filter);
     const filterKeys: string[] = Object.keys(filterCriterion);
     const type = props.match.params.type;
 
@@ -145,23 +149,27 @@ const Store: React.FC<Params> = props => {
       filterCriterion
     );
 
-    productFilter = searchFilter(productFilter, filter);
+    productFilter = searchFilter(productFilter, props.filter);
 
-    productFilter = priceFilter(productFilter, filter);
+    productFilter = priceFilter(productFilter, props.filter);
 
-    productFilter = sortFilter(productFilter, filter);
+    productFilter = sortFilter(productFilter, props.filter);
 
     setProducts(productFilter);
-  }, [filter, props.match.params.type]);
+  }, [props.filter, props.match.params.type]);
 
   return (
     <div>
       <h1>{props.match.params.type}</h1>
-      <Filter filter={filter} dispatch={dispatch} options={options} />
-      <Sort filter={filter} dispatch={dispatch} />
+      <Filter
+        filter={props.filter}
+        dispatch={props.dispatch}
+        options={options}
+      />
+      <Sort filter={props.filter} dispatch={props.dispatch} />
       <ProductWindow products={products} type={props.match.params.type} />
     </div>
   );
 };
 
-export default Store;
+export default withRouter(Store);

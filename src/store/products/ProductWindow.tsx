@@ -20,7 +20,7 @@ const ProductWindow = ({ products, type }: Props) => {
   return (
     <div className="product-window">
       {products.map(item => (
-        <Link to={`/store/${type}/${item.sku}`}>
+        <Link to={`/store/${type}/${item.sku}`} key={item.sku}>
           <ProductCard item={item} />
         </Link>
       ))}

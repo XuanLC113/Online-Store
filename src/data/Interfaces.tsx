@@ -14,16 +14,22 @@ export interface IData {
   data: IProductData[];
 }
 
-export interface IFilter {
+export type IFilter = {
   search: string | number;
   price1: number;
   price2: number;
   sort: string;
   filter: {
+    style: {
+      wireless: boolean;
+      wired: boolean;
+      [key: string]: boolean;
+    };
     brand: {
       jbl: boolean;
       long: boolean;
       none: boolean;
+      [key: string]: boolean;
     };
     color: {
       black: boolean;
@@ -35,7 +41,7 @@ export interface IFilter {
       [key: string]: boolean;
     };
   };
-}
+};
 
 export interface IFilterCriterion {
   type: string[];

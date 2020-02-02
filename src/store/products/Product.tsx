@@ -40,6 +40,7 @@ const Product: React.FC<Props> = props => {
   }
   return (
     <div>
+      <button onClick={() => props.history.go(-1)}>back</button>
       <ProductDisplay
         product={product}
         color={color}

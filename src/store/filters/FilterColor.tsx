@@ -12,7 +12,7 @@ const FilterColor = ({ filter, dispatch, options }: Props) => {
       <p>color</p>
       <div>
         {options.map(option => (
-          <label>
+          <label key={option}>
             <input
               type="checkbox"
               checked={filter.filter.color[option]}
