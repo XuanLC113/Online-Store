@@ -14,7 +14,7 @@ const initialProduct: IProductData = {
   sku: 0,
   title: "",
   type: "",
-  style: "",
+  feature: [],
   brand: "",
   color: [],
   price: 0

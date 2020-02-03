@@ -20,7 +20,7 @@ interface Params extends RouteComponentProps<{ type?: string }> {
 }
 
 const initialFilterOptions: IFilterCriterion = {
-  style: [],
+  feature: [],
   brand: [],
   color: []
 };

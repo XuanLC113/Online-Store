@@ -5,7 +5,7 @@ type Action =
   | { type: "sort"; payload: string }
   | { type: "price1"; payload: number }
   | { type: "price2"; payload: number }
-  | { type: "style"; payload: string }
+  | { type: "feature"; payload: string }
   | { type: "brand"; payload: string }
   | { type: "color"; payload: string }
   | { type: "load"; filter: IFilter }
@@ -17,7 +17,7 @@ const filters: IFilter = {
   price2: 100,
   sort: "alphabetical",
   filter: {
-    style: [],
+    feature: [],
     brand: [],
     color: []
   }
@@ -48,12 +48,12 @@ function reducer(state: IFilter, action: Action): IFilter {
         return { ...state, price2: action.payload };
       }
       return state;
-    case "style":
+    case "feature":
       return {
         ...state,
         filter: {
           ...state.filter,
-          style: modify(state.filter.style, action.payload)
+          feature: modify(state.filter.feature, action.payload)
         }
       };
     case "brand":

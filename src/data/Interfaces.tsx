@@ -3,7 +3,7 @@ export interface IProductData {
   sku: number;
   title: string;
   type: string;
-  style: string;
+  feature: string[];
   brand: string;
   color: string[];
   price: number;
@@ -20,14 +20,14 @@ export type IFilter = {
   price2: number;
   sort: string;
   filter: {
-    style: string[];
+    feature: string[];
     brand: string[];
     color: string[];
   };
 };
 
 export interface IFilterCriterion {
-  style: string[];
+  feature: string[];
   brand: string[];
   color: string[];
   [key: string]: string[];

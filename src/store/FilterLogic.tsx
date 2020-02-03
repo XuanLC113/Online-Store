@@ -7,6 +7,9 @@ function basicFilter(
 ): IProductData[] {
   return products.filter(item => {
     return filterKeys.every(key => {
+      if (key === "feature") {
+        return filterCriterion[key].every(subkey => item[key].includes(subkey));
+      }
       if (filterCriterion[key].length === 0) {
         return true;
       }
@@ -54,7 +57,7 @@ function sortFilter(products: IProductData[], filter: IFilter): IProductData[] {
 //set filter options for current store listing
 function setFilterOptions(products: IProductData[]) {
   const options: IFilterCriterion = {
-    style: [],
+    feature: [],
     brand: [],
     color: []
   };

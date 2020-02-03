@@ -6,17 +6,17 @@ interface Props {
   options: string[];
 }
 
-const FilterStyle = ({ filter, dispatch, options }: Props) => {
+const FilterFeature = ({ filter, dispatch, options }: Props) => {
   return (
     <div>
-      <p>style</p>
+      <p>features</p>
       <div>
         {options.map(option => (
           <label key={option}>
             <input
               type="checkbox"
-              checked={filter.filter.style.includes(option)}
-              onChange={() => dispatch({ type: "style", payload: option })}
+              checked={filter.filter.feature.includes(option)}
+              onChange={() => dispatch({ type: "feature", payload: option })}
             />
             {option}
           </label>
@@ -26,4 +26,4 @@ const FilterStyle = ({ filter, dispatch, options }: Props) => {
   );
 };
 
-export default FilterStyle;
+export default FilterFeature;

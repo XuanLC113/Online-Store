@@ -1,13 +1,13 @@
 import React, { Dispatch } from "react";
 import FilterSearch from "./FilterSearch";
-import FilterStyle from "./FilterStyle";
+import FilterFeature from "./FilterFeature";
 import FilterColor from "./FilterColor";
 import FilterBrand from "./FilterBrand";
 import FilterPrice from "./FilterPrice";
 import FilterTags from "./FilterTags";
 
 interface FilterCriterion {
-  style: string[];
+  feature: string[];
   brand: string[];
   color: string[];
   [key: string]: string[];
@@ -25,10 +25,10 @@ const Filter = ({ filter, dispatch, options }: Props) => {
       <form>
         <FilterTags filter={filter} dispatch={dispatch} />
         <FilterSearch filter={filter} dispatch={dispatch} />
-        <FilterStyle
+        <FilterFeature
           filter={filter}
           dispatch={dispatch}
-          options={options.style}
+          options={options.feature}
         />
         <FilterBrand
           filter={filter}
