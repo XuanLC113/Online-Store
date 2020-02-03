@@ -1,4 +1,4 @@
-import React, { useState, Dispatch } from "react";
+import React, { useState, useEffect, useRef, Dispatch } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +11,20 @@ interface Props {
 }
 
 const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
-  const [hover, setHover] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  const dropDownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      if (dropDown && dropDownRef && !dropDownRef.current?.contains(e.target)) {
+        setDropDown(false);
+      }
+    };
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [dropDown]);
 
   return (
     <div className="navbar">
@@ -23,19 +36,11 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
         >
           <li>Home</li>
         </Link>
-        <div
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          <Link
-            className="link nav-store"
-            to="/store"
-            onClick={() => dispatch({ type: "reset" })}
-          >
-            <li>Shop</li>
-          </Link>
-          {hover && (
-            <div className="store-dropdown">
+        <div onClick={() => setDropDown(prevState => !prevState)}>
+          <li className="link nav-store">Shop</li>
+
+          {dropDown && (
+            <div className="store-dropdown" ref={dropDownRef}>
               <Link
                 className="link"
                 to="/store/earbud"

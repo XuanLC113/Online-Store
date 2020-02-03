@@ -7,7 +7,6 @@ import { filters, reducer } from "./store/filters/FilterReducer";
 import Home from "./home/Home";
 import NavBar from "./navbar/NavBar";
 import Store from "./store/Store";
-import StoreHome from "./store/StoreHome";
 import Product from "./products/Product";
 import Cart from "./cart/Cart";
 import "./App.css";
@@ -94,7 +93,6 @@ const App: React.FC = () => {
         )}
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/store/" component={StoreHome} />
           <Route exact path="/store/:type" component={Store}>
             <Store filter={filter} dispatch={dispatch} />
           </Route>
