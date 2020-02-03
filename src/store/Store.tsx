@@ -71,6 +71,7 @@ const Store: React.FC<Params> = props => {
         filter={props.filter}
         dispatch={props.dispatch}
         options={options}
+        page={props.match.params.type}
       />
       <Sort filter={props.filter} dispatch={props.dispatch} />
       <ProductWindow products={products} type={props.match.params.type} />

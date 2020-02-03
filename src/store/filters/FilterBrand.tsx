@@ -9,7 +9,6 @@ interface Props {
 const FilterBrand = ({ filter, dispatch, options }: Props) => {
   return (
     <div>
-      <p>brand</p>
       <div>
         {options.map(option => (
           <label key={option}>

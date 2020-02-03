@@ -1,4 +1,4 @@
-import React, { Dispatch } from "react";
+import React, { useState, Dispatch, useEffect } from "react";
 import FilterSearch from "./FilterSearch";
 import FilterFeature from "./FilterFeature";
 import FilterColor from "./FilterColor";
@@ -17,29 +17,55 @@ interface Props {
   filter: any;
   dispatch: Dispatch<any>;
   options: FilterCriterion;
+  page: string | undefined;
 }
 
-const Filter = ({ filter, dispatch, options }: Props) => {
+const Filter = ({ filter, dispatch, options, page }: Props) => {
+  const [openFeature, setOpenFeature] = useState(false);
+  const [openBrand, setOpenBrand] = useState(false);
+  const [openColor, setOpenColor] = useState(false);
+
+  useEffect(() => {
+    setOpenFeature(false);
+    setOpenBrand(false);
+    setOpenColor(false);
+  }, [page]);
+
   return (
     <div className="filter-window">
       <form>
-        <FilterTags filter={filter} dispatch={dispatch} />
         <FilterSearch filter={filter} dispatch={dispatch} />
-        <FilterFeature
-          filter={filter}
-          dispatch={dispatch}
-          options={options.feature}
-        />
-        <FilterBrand
-          filter={filter}
-          dispatch={dispatch}
-          options={options.brand}
-        />
-        <FilterColor
-          filter={filter}
-          dispatch={dispatch}
-          options={options.color}
-        />
+        <FilterTags filter={filter} dispatch={dispatch} />
+        <div onClick={() => setOpenFeature(prevState => !prevState)}>
+          <p>Features</p>
+        </div>
+        {openFeature && (
+          <FilterFeature
+            filter={filter}
+            dispatch={dispatch}
+            options={options.feature}
+          />
+        )}
+        <div onClick={() => setOpenBrand(prevState => !prevState)}>
+          <p>Brands</p>
+        </div>
+        {openBrand && (
+          <FilterBrand
+            filter={filter}
+            dispatch={dispatch}
+            options={options.brand}
+          />
+        )}
+        <div onClick={() => setOpenColor(prevState => !prevState)}>
+          <p>Color</p>
+        </div>
+        {openColor && (
+          <FilterColor
+            filter={filter}
+            dispatch={dispatch}
+            options={options.color}
+          />
+        )}
         <FilterPrice filter={filter} dispatch={dispatch} />
       </form>
     </div>
