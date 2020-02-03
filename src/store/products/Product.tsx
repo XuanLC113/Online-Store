@@ -32,7 +32,7 @@ const Product: React.FC<Props> = props => {
         setColor(item.color[0]);
       }
     }
-  }, []);
+  }, [props.match.params.id]);
 
   function addToCart() {
     modifyItem(product, color, 1);

@@ -79,7 +79,7 @@ const App: React.FC = () => {
         setCartSize(count);
       };
     };
-  }, [reload]);
+  }, [reloadCart]);
 
   return (
     <Router>

@@ -8,18 +8,14 @@ interface Props {
 const FilterSearch = ({ filter, dispatch }: Props) => {
   return (
     <div>
-      <form>
-        <label>
-          <input
-            type="text"
-            value={filter.search}
-            onChange={e =>
-              dispatch({ type: "search", payload: e.target.value })
-            }
-          />
-          Search
-        </label>
-      </form>
+      <label>
+        <input
+          type="text"
+          value={filter.search}
+          onChange={e => dispatch({ type: "search", payload: e.target.value })}
+        />
+        Search
+      </label>
     </div>
   );
 };

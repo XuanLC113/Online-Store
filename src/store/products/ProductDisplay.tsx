@@ -15,7 +15,9 @@ const ProductDisplay = ({ product, color, setColor, addToCart }: Props) => {
       <p>{product.sku}</p>
       <select value={color} onChange={e => setColor(e.target.value)}>
         {product.color.map(color => (
-          <option value={color}>{color}</option>
+          <option key={color} value={color}>
+            {color}
+          </option>
         ))}
       </select>
       <button onClick={addToCart}>add to cart</button>

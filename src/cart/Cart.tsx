@@ -22,13 +22,17 @@ const Cart = ({ cartItems, reload, closeCart }: Props) => {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  }, [closeCart]);
 
   return (
     <div className="cart" ref={cartRef}>
       <div className="cart-items">
         {cartItems.map(item => (
-          <CartItem item={item} reload={reload} />
+          <CartItem
+            item={item}
+            reload={reload}
+            key={item.product.sku + item.color}
+          />
         ))}
       </div>
       <div className="cart-receipt">
