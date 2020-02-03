@@ -1,25 +1,23 @@
 import React, { useState, useEffect, useReducer } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { openDB } from "./cart/CartLogic";
+import { ICart, IFilter } from "./data/Interfaces";
+import { filters, reducer } from "./store/filters/FilterReducer";
+
 import Home from "./home/Home";
 import NavBar from "./navbar/NavBar";
 import Store from "./store/Store";
 import StoreHome from "./store/StoreHome";
 import Product from "./store/products/Product";
 import Cart from "./cart/Cart";
-import { openDB } from "./cart/CartLogic";
-import { ICart, IFilter } from "./data/Interfaces";
-import {
-  filters as initialFilters,
-  reducer
-} from "./store/filters/FilterReducer";
+import "./App.css";
 
 const initialCart: ICart[] = [];
 
 function getinitialFilters(): IFilter {
   let filterObj = localStorage.getItem("filter");
   if (filterObj === null) {
-    return initialFilters;
+    return filters;
   }
   return JSON.parse(filterObj);
 }

@@ -23,43 +23,43 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
         >
           <li>Home</li>
         </Link>
-        <Link
-          className="link nav-store"
-          to="/store"
-          onClick={() => dispatch({ type: "reset" })}
+        <div
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
-          <li
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+          <Link
+            className="link nav-store"
+            to="/store"
+            onClick={() => dispatch({ type: "reset" })}
           >
-            Shop
-            {hover && (
-              <div className="store-dropdown">
-                <Link
-                  className="link"
-                  to="/store/earbud"
-                  onClick={() => dispatch({ type: "reset" })}
-                >
-                  <li>Earbuds</li>
-                </Link>
-                <Link
-                  className="link"
-                  to="/store/headphone"
-                  onClick={() => dispatch({ type: "reset" })}
-                >
-                  <li>Headphones</li>
-                </Link>
-                <Link
-                  className="link"
-                  to="/store/speaker"
-                  onClick={() => dispatch({ type: "reset" })}
-                >
-                  <li>Speakers</li>
-                </Link>
-              </div>
-            )}
-          </li>
-        </Link>
+            <li>Shop</li>
+          </Link>
+          {hover && (
+            <div className="store-dropdown">
+              <Link
+                className="link"
+                to="/store/earbud"
+                onClick={() => dispatch({ type: "reset" })}
+              >
+                <li>Earbuds</li>
+              </Link>
+              <Link
+                className="link"
+                to="/store/headphone"
+                onClick={() => dispatch({ type: "reset" })}
+              >
+                <li>Headphones</li>
+              </Link>
+              <Link
+                className="link"
+                to="/store/speaker"
+                onClick={() => dispatch({ type: "reset" })}
+              >
+                <li>Speakers</li>
+              </Link>
+            </div>
+          )}
+        </div>
 
         <li className="nav-cart" onClick={() => cartHandler()}>
           <span className="cart-icon">

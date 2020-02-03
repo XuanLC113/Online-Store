@@ -20,31 +20,13 @@ export type IFilter = {
   price2: number;
   sort: string;
   filter: {
-    style: {
-      wireless: boolean;
-      wired: boolean;
-      [key: string]: boolean;
-    };
-    brand: {
-      jbl: boolean;
-      long: boolean;
-      none: boolean;
-      [key: string]: boolean;
-    };
-    color: {
-      black: boolean;
-      blue: boolean;
-      green: boolean;
-      gray: boolean;
-      plaid: boolean;
-      red: boolean;
-      [key: string]: boolean;
-    };
+    style: string[];
+    brand: string[];
+    color: string[];
   };
 };
 
 export interface IFilterCriterion {
-  type: string[];
   style: string[];
   brand: string[];
   color: string[];

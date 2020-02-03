@@ -1,7 +1,17 @@
 .cart {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   right: 1rem;
   margin: 1rem;
-  max-height: 80%;
+  max-height: 50%;
   background: gray;
+  .cart-items {
+    flex: 3;
+    max-height: 80%;
+    overflow: auto;
+  }
+  .cart-receipt {
+    flex: 1;
+  }
 }

@@ -17,25 +17,20 @@ const filters: IFilter = {
   price2: 100,
   sort: "alphabetical",
   filter: {
-    style: {
-      wireless: false,
-      wired: false
-    },
-    brand: {
-      jbl: false,
-      long: false,
-      none: false
-    },
-    color: {
-      black: false,
-      blue: false,
-      green: false,
-      gray: false,
-      plaid: false,
-      red: false
-    }
+    style: [],
+    brand: [],
+    color: []
   }
 };
+
+function modify(arr: string[], value: string): string[] {
+  let position = arr.indexOf(value);
+  if (position === -1) {
+    return arr.concat(value);
+  }
+  arr.splice(position, 1);
+  return arr;
+}
 
 function reducer(state: IFilter, action: Action): IFilter {
   switch (action.type) {
@@ -58,10 +53,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          style: {
-            ...state.filter.style,
-            [action.style]: !state.filter.style[action.style]
-          }
+          style: modify(state.filter.style, action.style)
         }
       };
     case "brand":
@@ -69,10 +61,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          brand: {
-            ...state.filter.brand,
-            [action.brand]: !state.filter.brand[action.brand]
-          }
+          brand: modify(state.filter.brand, action.brand)
         }
       };
     case "color":
@@ -80,10 +69,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          color: {
-            ...state.filter.color,
-            [action.color]: !state.filter.color[action.color]
-          }
+          color: modify(state.filter.color, action.color)
         }
       };
     case "load":

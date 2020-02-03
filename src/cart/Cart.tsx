@@ -26,14 +26,21 @@ const Cart = ({ cartItems, reload, closeCart }: Props) => {
 
   return (
     <div className="cart" ref={cartRef}>
-      {cartItems.map(item => (
-        <CartItem item={item} reload={reload} />
-      ))}
-      <p>
-        $
-        {cartItems.reduce((cost, cur) => cost + cur.product.price * cur.qty, 0)}
-      </p>
-      <button>Checkout</button>
+      <div className="cart-items">
+        {cartItems.map(item => (
+          <CartItem item={item} reload={reload} />
+        ))}
+      </div>
+      <div className="cart-receipt">
+        <p>
+          $
+          {cartItems.reduce(
+            (cost, cur) => cost + cur.product.price * cur.qty,
+            0
+          )}
+        </p>
+        <button>Checkout</button>
+      </div>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import FilterBrand from "./FilterBrand";
 import FilterPrice from "./FilterPrice";
 
 interface FilterCriterion {
-  type: string[];
   style: string[];
   brand: string[];
   color: string[];
