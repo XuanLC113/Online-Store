@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { IProductData } from "../../data/Interfaces";
+import { IProductData } from "../data/Interfaces";
 
 interface Props {
   product: IProductData;
@@ -8,7 +8,7 @@ interface Props {
   addToCart: () => void;
 }
 
-const ProductDisplay = ({ product, color, setColor, addToCart }: Props) => {
+const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
   return (
     <div>
       <h1>{product.title}</h1>
@@ -25,4 +25,4 @@ const ProductDisplay = ({ product, color, setColor, addToCart }: Props) => {
   );
 };
 
-export default ProductDisplay;
+export default ProductDetails;

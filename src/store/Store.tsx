@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Dispatch } from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import * as products_data from "../data/products.json";
-import ProductWindow from "./products/ProductWindow";
+import ProductWindow from "./productlisting/ProductListing";
 import Filter from "./filters/Filter";
 import Sort from "./Sort";
 import { IProductData, IData, IFilterCriterion } from "../data/Interfaces";

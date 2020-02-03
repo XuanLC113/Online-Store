@@ -13,7 +13,7 @@ interface Props {
   item: Items;
 }
 
-const ProductCard = ({ item }: Props) => {
+const ProductListingCard = ({ item }: Props) => {
   return (
     <div>
       <p>
@@ -23,4 +23,4 @@ const ProductCard = ({ item }: Props) => {
   );
 };
 
-export default ProductCard;
+export default ProductListingCard;

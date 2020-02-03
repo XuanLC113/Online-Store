@@ -8,7 +8,7 @@ import Home from "./home/Home";
 import NavBar from "./navbar/NavBar";
 import Store from "./store/Store";
 import StoreHome from "./store/StoreHome";
-import Product from "./store/products/Product";
+import Product from "./products/Product";
 import Cart from "./cart/Cart";
 import "./App.css";
 

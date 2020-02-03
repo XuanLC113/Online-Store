@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import * as products_data from "../../data/products.json";
+import * as products_data from "../data/products.json";
 import { RouteComponentProps, withRouter } from "react-router";
-import { IProductData, IData } from "../../data/Interfaces";
-import { modifyItem } from "../../cart/CartLogic";
-import ProductDisplay from "./ProductDisplay";
+import { IProductData, IData } from "../data/Interfaces";
+import { modifyItem } from "../cart/CartLogic";
+import ProductDetails from "./ProductDetails";
 
 interface Props extends RouteComponentProps<{ id?: string }> {
   reload: () => void;
@@ -41,7 +41,7 @@ const Product: React.FC<Props> = props => {
   return (
     <div>
       <button onClick={() => props.history.go(-1)}>back</button>
-      <ProductDisplay
+      <ProductDetails
         product={product}
         color={color}
         setColor={setColor}

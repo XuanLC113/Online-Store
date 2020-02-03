@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ProductCard from "./ProductCard";
+import ProductListingCard from "./ProductListingCard";
 
 type Items = {
   id: number;
@@ -16,16 +16,16 @@ type Props = {
   type: string | undefined;
 };
 
-const ProductWindow = ({ products, type }: Props) => {
+const ProductListing = ({ products, type }: Props) => {
   return (
     <div className="product-window">
       {products.map(item => (
         <Link to={`/store/${type}/${item.sku}`} key={item.sku}>
-          <ProductCard item={item} />
+          <ProductListingCard item={item} />
         </Link>
       ))}
     </div>
   );
 };
 
-export default ProductWindow;
+export default ProductListing;
