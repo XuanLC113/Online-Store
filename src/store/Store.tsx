@@ -39,7 +39,7 @@ const Store: React.FC<Params> = props => {
     let products = data.filter(item => item.type === type);
     let options = setFilterOptions(products);
     setOptions(options);
-  }, [props.match.params.type, data]); //data
+  }, [props.match.params.type, data]);
 
   useEffect(() => {
     const filterCriterion: IFilterCriterion = props.filter.filter;
@@ -62,7 +62,7 @@ const Store: React.FC<Params> = props => {
     productFilter = sortFilter(productFilter, props.filter);
 
     setProducts(productFilter);
-  }, [props.filter, props.match.params.type, data]); //data
+  }, [props.filter, props.match.params.type, data]);
 
   return (
     <div>

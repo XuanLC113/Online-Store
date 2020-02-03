@@ -15,8 +15,8 @@ const FilterStyle = ({ filter, dispatch, options }: Props) => {
           <label key={option}>
             <input
               type="checkbox"
-              checked={filter.filter.style[option]}
-              onChange={() => dispatch({ type: "style", style: option })}
+              checked={filter.filter.style.includes(option)}
+              onChange={() => dispatch({ type: "style", payload: option })}
             />
             {option}
           </label>

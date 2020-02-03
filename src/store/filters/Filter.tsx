@@ -4,6 +4,7 @@ import FilterStyle from "./FilterStyle";
 import FilterColor from "./FilterColor";
 import FilterBrand from "./FilterBrand";
 import FilterPrice from "./FilterPrice";
+import FilterTags from "./FilterTags";
 
 interface FilterCriterion {
   style: string[];
@@ -22,6 +23,7 @@ const Filter = ({ filter, dispatch, options }: Props) => {
   return (
     <div className="filter-window">
       <form>
+        <FilterTags filter={filter} dispatch={dispatch} />
         <FilterSearch filter={filter} dispatch={dispatch} />
         <FilterStyle
           filter={filter}

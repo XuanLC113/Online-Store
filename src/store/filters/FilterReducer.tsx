@@ -3,11 +3,11 @@ import { IFilter } from "../../data/Interfaces";
 type Action =
   | { type: "search"; payload: string | number }
   | { type: "sort"; payload: string }
-  | { type: "price1"; price: number }
-  | { type: "price2"; price: number }
-  | { type: "style"; style: string }
-  | { type: "brand"; brand: string }
-  | { type: "color"; color: string }
+  | { type: "price1"; payload: number }
+  | { type: "price2"; payload: number }
+  | { type: "style"; payload: string }
+  | { type: "brand"; payload: string }
+  | { type: "color"; payload: string }
   | { type: "load"; filter: IFilter }
   | { type: "reset" };
 
@@ -39,13 +39,13 @@ function reducer(state: IFilter, action: Action): IFilter {
     case "sort":
       return { ...state, sort: action.payload };
     case "price1":
-      if (action.price < state.price2) {
-        return { ...state, price1: action.price };
+      if (action.payload < state.price2) {
+        return { ...state, price1: action.payload };
       }
       return state;
     case "price2":
-      if (state.price1 < action.price) {
-        return { ...state, price2: action.price };
+      if (state.price1 < action.payload) {
+        return { ...state, price2: action.payload };
       }
       return state;
     case "style":
@@ -53,7 +53,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          style: modify(state.filter.style, action.style)
+          style: modify(state.filter.style, action.payload)
         }
       };
     case "brand":
@@ -61,7 +61,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          brand: modify(state.filter.brand, action.brand)
+          brand: modify(state.filter.brand, action.payload)
         }
       };
     case "color":
@@ -69,7 +69,7 @@ function reducer(state: IFilter, action: Action): IFilter {
         ...state,
         filter: {
           ...state.filter,
-          color: modify(state.filter.color, action.color)
+          color: modify(state.filter.color, action.payload)
         }
       };
     case "load":
