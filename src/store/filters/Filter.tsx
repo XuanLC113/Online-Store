@@ -33,7 +33,7 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
 
   return (
     <div className="filter-window">
-      <form>
+      <form className="form">
         <FilterSearch filter={filter} dispatch={dispatch} />
         <FilterTags filter={filter} dispatch={dispatch} />
         <div onClick={() => setOpenFeature(prevState => !prevState)}>

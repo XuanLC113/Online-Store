@@ -69,7 +69,7 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
         <li className="nav-cart" onClick={() => cartHandler()}>
           <span className="cart-icon">
             <FontAwesomeIcon icon={faShoppingCart} />
-            <span className="cart-badge">{cartSize}</span>
+            {cartSize > 0 && <span className="cart-badge">{cartSize}</span>}
           </span>
         </li>
       </ul>

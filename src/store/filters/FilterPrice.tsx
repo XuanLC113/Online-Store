@@ -1,4 +1,5 @@
 import React, { Dispatch } from "react";
+import "./FilterPrice.css";
 
 interface Props {
   filter: any;
@@ -7,7 +8,9 @@ interface Props {
 
 const FilterPrice = ({ filter, dispatch }: Props) => {
   return (
-    <div>
+    <div className="priceRangeSlider">
+      ${filter.price1} - ${filter.price2}
+      <br />
       <label>
         <input
           type="range"
@@ -23,7 +26,6 @@ const FilterPrice = ({ filter, dispatch }: Props) => {
           value={filter.price2}
           onChange={e => dispatch({ type: "price2", payload: e.target.value })}
         />
-        ${filter.price1} - ${filter.price2}
       </label>
     </div>
   );

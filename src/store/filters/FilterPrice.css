@@ -1,0 +1,22 @@
+.priceRangeSlider {
+  position: relative;
+  display: inline-block;
+}
+
+.priceRangeSlider input {
+  position: absolute;
+}
+
+.priceRangeSlider input[type="range"] {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.priceRangeSlider input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.priceRangeSlider input[type="range"]:nth-child(1)::-webkit-slider-thumb {
+  z-index: 2;
+}

@@ -12,7 +12,7 @@ import {
   sortFilter,
   setFilterOptions
 } from "./FilterLogic";
-import "./store.css";
+import "./Store.css";
 
 interface Params extends RouteComponentProps<{ type?: string }> {
   filter: any;
@@ -65,16 +65,18 @@ const Store: React.FC<Params> = props => {
   }, [props.filter, props.match.params.type, data]);
 
   return (
-    <div>
-      <h1>{props.match.params.type}</h1>
+    <div className="store">
       <Filter
         filter={props.filter}
         dispatch={props.dispatch}
         options={options}
         page={props.match.params.type}
       />
-      <Sort filter={props.filter} dispatch={props.dispatch} />
-      <ProductWindow products={products} type={props.match.params.type} />
+      <div className="sort-product-window">
+        <h1>{props.match.params.type}</h1>
+        <Sort filter={props.filter} dispatch={props.dispatch} />
+        <ProductWindow products={products} type={props.match.params.type} />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.store {
+  display: flex;
+  .filter-window {
+    flex: 1;
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+  }
+  .sort-product-window {
+    flex: 3;
+  }
+}
+
+.product-window {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-auto-rows: 300px;
+  .product-card {
+    margin: 1rem;
+  }
+}

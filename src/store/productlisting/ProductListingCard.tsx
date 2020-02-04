@@ -15,7 +15,7 @@ interface Props {
 
 const ProductListingCard = ({ item }: Props) => {
   return (
-    <div>
+    <div className="product-card">
       <p>
         {item.title} ${item.price}
       </p>
