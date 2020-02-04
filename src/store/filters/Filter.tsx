@@ -5,6 +5,8 @@ import FilterColor from "./FilterColor";
 import FilterBrand from "./FilterBrand";
 import FilterPrice from "./FilterPrice";
 import FilterTags from "./FilterTags";
+import "./Filter.css";
+import OpenFilter from "./OpenFilter";
 
 interface FilterCriterion {
   feature: string[];
@@ -33,12 +35,14 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
 
   return (
     <div className="filter-window">
-      <form className="form">
+      <form>
         <FilterSearch filter={filter} dispatch={dispatch} />
         <FilterTags filter={filter} dispatch={dispatch} />
-        <div onClick={() => setOpenFeature(prevState => !prevState)}>
-          <p>Features</p>
-        </div>
+        <OpenFilter
+          name="Features"
+          open={openFeature}
+          setOpen={() => setOpenFeature(prevState => !prevState)}
+        />
         {openFeature && (
           <FilterFeature
             filter={filter}
@@ -46,9 +50,11 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
             options={options.feature}
           />
         )}
-        <div onClick={() => setOpenBrand(prevState => !prevState)}>
-          <p>Brands</p>
-        </div>
+        <OpenFilter
+          name="Brand"
+          open={openBrand}
+          setOpen={() => setOpenBrand(prevState => !prevState)}
+        />
         {openBrand && (
           <FilterBrand
             filter={filter}
@@ -56,9 +62,11 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
             options={options.brand}
           />
         )}
-        <div onClick={() => setOpenColor(prevState => !prevState)}>
-          <p>Color</p>
-        </div>
+        <OpenFilter
+          name="Color"
+          open={openColor}
+          setOpen={() => setOpenColor(prevState => !prevState)}
+        />
         {openColor && (
           <FilterColor
             filter={filter}

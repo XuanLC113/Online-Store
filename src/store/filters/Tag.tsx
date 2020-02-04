@@ -1,4 +1,7 @@
 import React, { Dispatch } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./Tag.css";
 
 interface Props {
   tag: string;
@@ -8,8 +11,12 @@ interface Props {
 
 const Tag = ({ tag, filterKey, dispatch }: Props) => {
   return (
-    <div>
-      <p onClick={() => dispatch({ type: filterKey, payload: tag })}>{tag}</p>
+    <div
+      className="tag"
+      onClick={() => dispatch({ type: filterKey, payload: tag })}
+    >
+      <p>{tag}</p>
+      <FontAwesomeIcon icon={faTimes} />
     </div>
   );
 };

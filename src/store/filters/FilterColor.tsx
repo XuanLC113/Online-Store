@@ -8,7 +8,7 @@ interface Props {
 
 const FilterColor = ({ filter, dispatch, options }: Props) => {
   return (
-    <div>
+    <div className="filter">
       <div>
         {options.map(option => (
           <label key={option}>

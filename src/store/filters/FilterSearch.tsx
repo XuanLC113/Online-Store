@@ -13,8 +13,8 @@ const FilterSearch = ({ filter, dispatch }: Props) => {
           type="text"
           value={filter.search}
           onChange={e => dispatch({ type: "search", payload: e.target.value })}
+          placeholder="search..."
         />
-        Search
       </label>
     </div>
   );
