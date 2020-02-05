@@ -26,7 +26,7 @@ const Cart = ({ cartItems, reload, closeCart }: Props) => {
 
   return (
     <div className="cart" ref={cartRef}>
-      <div className="cart-items">
+      <div className="cart-list">
         {cartItems.map(item => (
           <CartItem
             item={item}
@@ -37,7 +37,7 @@ const Cart = ({ cartItems, reload, closeCart }: Props) => {
       </div>
       <div className="cart-receipt">
         <p>
-          $
+          Total: $
           {cartItems.reduce(
             (cost, cur) => cost + cur.product.price * cur.qty,
             0

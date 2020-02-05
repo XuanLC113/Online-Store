@@ -1,7 +1,10 @@
 .navbar {
+  padding: 0 2rem;
+  background: lightgrey;
   ul {
     display: flex;
     list-style-type: none;
+    align-items: center;
     li {
       padding: 1rem;
       color: black;
@@ -18,15 +21,9 @@
     }
     .cart-badge {
       position: absolute;
-      background: white;
-      right: 0.5rem;
-      bottom: 0.5rem;
-      height: 1rem;
-      width: 1rem;
-      text-align: center;
-      border-radius: 50%;
-      color: black;
-      border: 1px solid black;
+      color: white;
+      right: 1.5rem;
+      top: 1rem;
     }
   }
 }

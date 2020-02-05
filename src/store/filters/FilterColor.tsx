@@ -11,14 +11,16 @@ const FilterColor = ({ filter, dispatch, options }: Props) => {
     <div className="filter">
       <div>
         {options.map(option => (
-          <label key={option}>
+          <div
+            className="filter-inputs"
+            onClick={() => dispatch({ type: "color", payload: option })}
+          >
             <input
               type="checkbox"
               checked={filter.filter.color.includes(option)}
-              onChange={() => dispatch({ type: "color", payload: option })}
             />
-            {option}
-          </label>
+            <label key={option}>{option}</label>
+          </div>
         ))}
       </div>
     </div>

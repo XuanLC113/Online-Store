@@ -11,14 +11,16 @@ const FilterBrand = ({ filter, dispatch, options }: Props) => {
     <div className="filter">
       <div>
         {options.map(option => (
-          <label key={option}>
+          <div
+            className="filter-inputs"
+            onClick={() => dispatch({ type: "brand", payload: option })}
+          >
             <input
               type="checkbox"
               checked={filter.filter.brand.includes(option)}
-              onChange={() => dispatch({ type: "brand", payload: option })}
             />
-            {option}
-          </label>
+            <label key={option}>{option}</label>
+          </div>
         ))}
       </div>
     </div>

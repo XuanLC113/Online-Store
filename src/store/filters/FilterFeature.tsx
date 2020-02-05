@@ -10,14 +10,16 @@ const FilterFeature = ({ filter, dispatch, options }: Props) => {
   return (
     <div className="filter">
       {options.map(option => (
-        <label key={option}>
+        <div
+          className="filter-inputs"
+          onClick={() => dispatch({ type: "feature", payload: option })}
+        >
           <input
             type="checkbox"
             checked={filter.filter.feature.includes(option)}
-            onChange={() => dispatch({ type: "feature", payload: option })}
           />
-          {option}
-        </label>
+          <label key={option}>{option}</label>
+        </div>
       ))}
     </div>
   );

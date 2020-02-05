@@ -7,7 +7,7 @@ interface Props {
 
 const FilterSearch = ({ filter, dispatch }: Props) => {
   return (
-    <div>
+    <div className="filter-search">
       <label>
         <input
           type="text"

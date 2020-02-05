@@ -1,8 +1,16 @@
+.navbar {
+  padding: 0 2rem;
+  background: lightgrey;
+}
+
 .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar ul li {
@@ -25,15 +33,9 @@
 
 .navbar ul .cart-badge {
   position: absolute;
-  background: white;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  height: 1rem;
-  width: 1rem;
-  text-align: center;
-  border-radius: 50%;
-  color: black;
-  border: 1px solid black;
+  color: white;
+  right: 1.5rem;
+  top: 1rem;
 }
 
 .store-dropdown {

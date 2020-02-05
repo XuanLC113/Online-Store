@@ -7,7 +7,7 @@
     align-self: flex-start;
   }
   .sort-product-window {
-    flex: 3;
+    flex: 4;
   }
 }
 
@@ -18,4 +18,19 @@
   .product-card {
     margin: 1rem;
   }
+}
+
+.sort-product-window {
+  h1 {
+    padding: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    background: lightpink;
+  }
+}
+
+.sort-window {
+  margin: 2rem;
+  display: flex;
+  justify-content: flex-end;
 }

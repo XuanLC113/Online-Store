@@ -17,10 +17,15 @@ const FilterTags = ({ filter, dispatch }: Props) => {
     }
   }
   return (
-    <div>
-      {tags.length !== 0 && (
-        <button onClick={() => dispatch({ type: "reset" })}>clear all</button>
-      )}
+    <div className="filter-tags">
+      <div className="tag-header">
+        {tags.length !== 0 && (
+          <>
+            <h2>Tags: </h2>
+            <button onClick={() => dispatch({ type: "reset" })}>clear</button>
+          </>
+        )}
+      </div>
       {tags}
     </div>
   );

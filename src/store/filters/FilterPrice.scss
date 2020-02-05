@@ -1,11 +1,15 @@
-.priceRangeSlider {
+.filter-price {
   position: relative;
-  display: inline-block;
+  margin: 0 0 4rem 0;
+  p {
+    text-align: center;
+    margin: 1rem;
+  }
   input {
     position: absolute;
   }
   input[type="range"] {
-    overflow: hidden;
+    width: 100%;
     cursor: pointer;
   }
 

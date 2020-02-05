@@ -19,16 +19,25 @@ const CartItem = ({ item, reload }: Props) => {
   }
 
   return (
-    <div>
-      <p>{item.product.title}</p>
-      <p>{item.color}</p>
-      <p>${item.product.price}</p>
-      <button onClick={() => modifyCartItem(-1)} disabled={item.qty === 1}>
-        -
-      </button>
-      <p>{item.qty}</p>
-      <button onClick={() => modifyCartItem(1)}>+</button>
-      <button onClick={() => deleteCartItem()}>Delete</button>
+    <div className="cart-item">
+      <span className="cart-item-img">
+        <img src="https://via.placeholder.com/150" />
+      </span>
+      <div className="cart-item-details">
+        <p className="cart-item-title">{item.product.title}</p>
+        <p className="cart-item-color">color: {item.color}</p>
+        <p className="cart-item-price">${item.product.price}</p>
+        <div className="cart-item-qty">
+          <button onClick={() => modifyCartItem(-1)} disabled={item.qty === 1}>
+            -
+          </button>
+          <p>{item.qty}</p>
+          <button onClick={() => modifyCartItem(1)}>+</button>
+        </div>
+        <button className="cart-item-delete" onClick={() => deleteCartItem()}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

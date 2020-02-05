@@ -36,8 +36,9 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
   return (
     <div className="filter-window">
       <form>
-        <FilterSearch filter={filter} dispatch={dispatch} />
         <FilterTags filter={filter} dispatch={dispatch} />
+        <FilterSearch filter={filter} dispatch={dispatch} />
+        <FilterPrice filter={filter} dispatch={dispatch} />
         <OpenFilter
           name="Features"
           open={openFeature}
@@ -74,7 +75,6 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
             options={options.color}
           />
         )}
-        <FilterPrice filter={filter} dispatch={dispatch} />
       </form>
     </div>
   );

@@ -16,9 +16,9 @@
 }
 
 .store .sort-product-window {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
 }
 
 .product-window {
@@ -31,4 +31,21 @@
 
 .product-window .product-card {
   margin: 1rem;
+}
+
+.sort-product-window h1 {
+  padding: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  background: lightpink;
+}
+
+.sort-window {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
