@@ -1,16 +1,38 @@
-img {
+.product-card {
+  text-align: center;
+}
+
+.image-link {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.product-card-image {
   object-fit: cover;
-  width: 200px;
-  height: 150px;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .color-picker {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin: 0 5px;
+  margin: 5px;
   border-radius: 1rem;
   &:hover {
     border: 2px solid lightgrey;
   }
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

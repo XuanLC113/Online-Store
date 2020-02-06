@@ -32,7 +32,11 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
-      "image": ["earbuds-983069__340.png"],
+      "image": [
+        "earbuds-983069__340.png",
+        "headphone-159569__340.png",
+        "music-3693310__340.png"
+      ],
       "price": 10
     },
 

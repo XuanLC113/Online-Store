@@ -4,6 +4,7 @@ import { RouteComponentProps, withRouter } from "react-router";
 import { IProductData, IData } from "../data/Interfaces";
 import { modifyItem } from "../cart/CartLogic";
 import ProductDetails from "./ProductDetails";
+import "./Product.css";
 
 interface Props extends RouteComponentProps<{ id?: string }> {
   reload: () => void;
@@ -41,7 +42,9 @@ const Product: React.FC<Props> = props => {
   }
   return (
     <div>
-      <button onClick={() => props.history.go(-1)}>back</button>
+      <button className="product-back" onClick={() => props.history.go(-1)}>
+        &lt; back
+      </button>
       <ProductDetails
         product={product}
         color={color}

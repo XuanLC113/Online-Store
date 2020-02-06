@@ -1,0 +1,84 @@
+.product-back {
+  border: none;
+  background: none;
+  padding: 1rem;
+}
+
+.product-back:hover {
+  text-decoration: underline;
+}
+
+.product-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-banner {
+  width: 50%;
+  margin: 2rem;
+}
+
+.product-banner .banner-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.banner-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2rem;
+}
+
+.banner-image-container .banner-image-selector {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.product-description h1 {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.product-description .product-price {
+  margin: 2rem 0;
+}
+
+.color-selector select {
+  padding: 1rem 10rem;
+  font-size: 2em;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(https://cdn4.iconfinder.com/data/icons/basic-user-interface-2/512/User_Interface-03-512.png) 96%/15% no-repeat #ddd;
+}
+
+.product-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.product-add .product-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.product-add .product-count button {
+  padding: 1rem;
+}
+
+.product-add .product-count p {
+  padding: 1rem 2rem;
+  border: 1px solid lightgrey;
+}
