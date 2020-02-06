@@ -15,9 +15,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
   grid-auto-rows: 300px;
-  .product-card {
-    margin: 1rem;
-  }
+  gap: 2rem;
 }
 
 .sort-product-window {

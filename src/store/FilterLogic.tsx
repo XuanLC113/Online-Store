@@ -54,6 +54,25 @@ function sortFilter(products: IProductData[], filter: IFilter): IProductData[] {
   }
 }
 
+function applyFilter(
+  products: IProductData[],
+  filterKeys: string[],
+  filterCriterion: IFilterCriterion,
+  filter: IFilter,
+  type: string | undefined
+): IProductData[] {
+  let productFilter = products.filter(item => item.type === type);
+
+  productFilter = basicFilter(productFilter, filterKeys, filterCriterion);
+
+  productFilter = searchFilter(productFilter, filter);
+
+  productFilter = priceFilter(productFilter, filter);
+
+  productFilter = sortFilter(productFilter, filter);
+  return productFilter;
+}
+
 //set filter options for current store listing
 function setFilterOptions(products: IProductData[]) {
   const options: IFilterCriterion = {
@@ -77,4 +96,11 @@ function setFilterOptions(products: IProductData[]) {
   return options;
 }
 
-export { basicFilter, searchFilter, priceFilter, sortFilter, setFilterOptions };
+export {
+  basicFilter,
+  searchFilter,
+  priceFilter,
+  sortFilter,
+  applyFilter,
+  setFilterOptions
+};

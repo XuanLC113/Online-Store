@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductListingCard from "./ProductListingCard";
 
 type Items = {
@@ -8,6 +7,7 @@ type Items = {
   title: string;
   type: string;
   color: string[];
+  image: string[];
   price: number;
 };
 
@@ -20,9 +20,7 @@ const ProductListing = ({ products, type }: Props) => {
   return (
     <div className="product-window">
       {products.map(item => (
-        <Link to={`/store/${type}/${item.sku}`} key={item.sku}>
-          <ProductListingCard item={item} />
-        </Link>
+        <ProductListingCard key={item.sku} item={item} type={type} />
       ))}
     </div>
   );

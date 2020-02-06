@@ -4,14 +4,8 @@ import * as products_data from "../data/products.json";
 import ProductWindow from "./productlisting/ProductListing";
 import Filter from "./filters/Filter";
 import Sort from "./Sort";
-import { IProductData, IData, IFilterCriterion } from "../data/Interfaces";
-import {
-  basicFilter,
-  searchFilter,
-  priceFilter,
-  sortFilter,
-  setFilterOptions
-} from "./FilterLogic";
+import { IData, IFilterCriterion } from "../data/Interfaces";
+import { applyFilter, setFilterOptions } from "./FilterLogic";
 import "./Store.css";
 
 interface Params extends RouteComponentProps<{ type?: string }> {
@@ -30,10 +24,12 @@ const Store: React.FC<Params> = props => {
   const [products, setProducts] = useState(data);
   const [options, setOptions] = useState(initialFilterOptions);
 
+  //put filters into localstorage
   useEffect(() => {
     localStorage.setItem("filter", JSON.stringify(props.filter));
   }, [props.filter]);
 
+  //list of filter options for each product type
   useEffect(() => {
     const type = props.match.params.type;
     let products = data.filter(item => item.type === type);
@@ -41,25 +37,19 @@ const Store: React.FC<Params> = props => {
     setOptions(options);
   }, [props.match.params.type, data]);
 
+  //run filter
   useEffect(() => {
     const filterCriterion: IFilterCriterion = props.filter.filter;
     const filterKeys: string[] = Object.keys(filterCriterion);
     const type = props.match.params.type;
 
-    //filter by type
-    let products = data.filter(item => item.type === type);
-
-    let productFilter: IProductData[] = basicFilter(
-      products,
+    let productFilter = applyFilter(
+      data,
       filterKeys,
-      filterCriterion
+      filterCriterion,
+      props.filter,
+      type
     );
-
-    productFilter = searchFilter(productFilter, props.filter);
-
-    productFilter = priceFilter(productFilter, props.filter);
-
-    productFilter = sortFilter(productFilter, props.filter);
 
     setProducts(productFilter);
   }, [props.filter, props.match.params.type, data]);

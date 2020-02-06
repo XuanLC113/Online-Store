@@ -17,6 +17,7 @@ const initialProduct: IProductData = {
   feature: [],
   brand: "",
   color: [],
+  image: [],
   price: 0
 };
 

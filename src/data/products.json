@@ -8,6 +8,7 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["desk-4308214__340.png"],
       "price": 10
     },
 
@@ -18,7 +19,8 @@
       "type": "earbud",
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
-      "color": ["blue"],
+      "color": ["blue", "red"],
+      "image": ["desk-4337465__340.png", "earbuds-983069__340.png"],
       "price": 10
     },
 
@@ -30,6 +32,7 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["earbuds-983069__340.png"],
       "price": 10
     },
 
@@ -41,6 +44,7 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["headphone-159569__340.png"],
       "price": 10
     },
 
@@ -52,6 +56,7 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["music-3693310__340.png"],
       "price": 10
     },
 
@@ -63,6 +68,7 @@
       "feature": ["wired", "soundcan"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["photo-1520170350707-b2da59970118.png"],
       "price": 10
     },
 
@@ -74,6 +80,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["black"],
+      "image": ["desk-4308214__340.png"],
       "price": 20
     },
 
@@ -85,6 +92,7 @@
       "feature": ["wireless"],
       "brand": "Sony",
       "color": ["green"],
+      "image": ["desk-4308214__340.png"],
       "price": 30
     },
 
@@ -96,6 +104,7 @@
       "feature": ["wired"],
       "brand": "monstercat",
       "color": ["red", "black"],
+      "image": ["desk-4308214__340.png"],
       "price": 40
     },
 
@@ -107,6 +116,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["gray"],
+      "image": ["desk-4308214__340.png"],
       "price": 50
     },
 
@@ -118,6 +128,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["black"],
+      "image": ["desk-4308214__340.png"],
       "price": 60
     },
 
@@ -129,6 +140,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["black"],
+      "image": ["desk-4308214__340.png"],
       "price": 70
     },
 
@@ -140,6 +152,7 @@
       "feature": ["wired"],
       "brand": "sony",
       "color": ["blue"],
+      "image": ["desk-4308214__340.png"],
       "price": 80
     },
 
@@ -151,6 +164,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["red"],
+      "image": ["desk-4308214__340.png"],
       "price": 90
     },
 
@@ -162,6 +176,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["gray"],
+      "image": ["desk-4308214__340.png"],
       "price": 99
     },
 
@@ -173,6 +188,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["plaid"],
+      "image": ["desk-4308214__340.png"],
       "price": 15
     },
 
@@ -184,6 +200,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["black"],
+      "image": ["desk-4308214__340.png"],
       "price": 25
     },
 
@@ -195,6 +212,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["blue"],
+      "image": ["desk-4308214__340.png"],
       "price": 35
     },
 
@@ -206,6 +224,7 @@
       "feature": ["wired"],
       "brand": "beats",
       "color": ["red"],
+      "image": ["desk-4308214__340.png"],
       "price": 45
     },
 
@@ -217,6 +236,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["green"],
+      "image": ["desk-4308214__340.png"],
       "price": 55
     },
 
@@ -228,6 +248,7 @@
       "feature": ["wired"],
       "brand": "jbl",
       "color": ["gray"],
+      "image": ["desk-4308214__340.png"],
       "price": 75
     }
   ]

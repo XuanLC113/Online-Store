@@ -1,0 +1,18 @@
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
+
+.color-picker {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 1rem;
+}
+
+.color-picker:hover {
+  border: 2px solid lightgrey;
+}

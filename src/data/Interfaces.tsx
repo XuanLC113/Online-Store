@@ -6,6 +6,7 @@ export interface IProductData {
   feature: string[];
   brand: string;
   color: string[];
+  image: string[];
   price: number;
   [key: string]: any;
 }
