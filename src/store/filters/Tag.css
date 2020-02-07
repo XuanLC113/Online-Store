@@ -1,20 +1,19 @@
 .tag {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 5px;
   padding: 2px 5px;
-  background: pink;
-  border-radius: 1rem;
+  background: lightblue;
 }
 
 .tag p {
-  margin: 0 5px;
+  margin: 0 7px;
 }
 
 .tag:hover {
-  background: plum;
+  background: dodgerblue;
 }

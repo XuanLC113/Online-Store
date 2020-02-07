@@ -1,6 +1,14 @@
 .filter-window {
-  margin: 0 2rem;
+  padding: 1rem;
+  margin: 0 1rem;
   overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid black;
 }
 
 .filter-window h2 {
@@ -8,65 +16,31 @@
   letter-spacing: 0.2em;
 }
 
-.filter-window .open-filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1rem;
-  background: lightgrey;
-  margin: 1rem 0;
+.filter-window .filter-seperator {
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  padding: 1px;
+  background: lightblue;
 }
 
-.filter-window .filter-inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 1rem;
+@media (max-width: 500px) {
+  .filter-window .open-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+    background: lightgrey;
+    margin: 1rem 0;
+  }
 }
 
-.filter-window .filter-inputs input[type="checkbox"] {
-  display: none;
-}
-
-.filter-window .filter-inputs label {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  margin: 5px;
-  cursor: pointer;
-}
-
-.filter-window .filter-inputs input[type="checkbox"] + label:before {
-  content: "";
-  border: 2px solid #ddd;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10px;
-  height: 10px;
-  padding: 2px;
-  margin-right: 10px;
-  text-align: center;
-}
-
-.filter-window .filter-inputs input[type="checkbox"]:checked + label:after {
-  content: "";
-  padding: 2px;
-  text-align: center;
-  position: absolute;
-  width: 1px;
-  height: 5px;
-  border: solid blue;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 2px;
-  left: 5px;
+@media (max-width: 500px) {
+  .filter-window {
+    display: block;
+  }
 }
 
 .filter-search {
@@ -81,23 +55,87 @@
   border: 1px solid black;
 }
 
-.filter-tags .tag-header {
+.filter-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+
+.filter-inputs input[type="checkbox"] {
+  display: none;
+}
+
+.filter-inputs label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.filter-inputs input[type="checkbox"] + label:before {
+  content: "";
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.filter-inputs input[type="checkbox"]:checked + label:after {
+  content: "";
+  padding: 2px;
+  text-align: center;
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 2px;
+  left: 5px;
+}
+
+.filter-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+.filter-tags .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .filter-tags button {
-  background: pink;
+  background: lightgrey;
   border: none;
-  padding: 0 1rem;
-  border-radius: 1rem;
+  padding: 5px 10px;
+  margin: 5px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: auto;
 }
 
 .filter-tags button:hover {
-  background: plum;
+  background: silver;
+  text-decoration: underline;
+}
+
+.empty-filter-tag {
+  padding: 1.25rem 0;
 }

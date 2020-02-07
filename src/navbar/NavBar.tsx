@@ -42,21 +42,21 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
           {dropDown && (
             <div className="store-dropdown" ref={dropDownRef}>
               <Link
-                className="link"
+                className="link link-earbud"
                 to="/store/earbud"
                 onClick={() => dispatch({ type: "reset" })}
               >
                 <li>Earbuds</li>
               </Link>
               <Link
-                className="link"
+                className="link link-headphone"
                 to="/store/headphone"
                 onClick={() => dispatch({ type: "reset" })}
               >
                 <li>Headphones</li>
               </Link>
               <Link
-                className="link"
+                className="link link-speaker"
                 to="/store/speaker"
                 onClick={() => dispatch({ type: "reset" })}
               >

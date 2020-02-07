@@ -2,11 +2,10 @@ import React, { useState, useEffect, Dispatch } from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import * as products_data from "../data/products.json";
 import ProductWindow from "./productlisting/ProductListing";
-import Filter from "./filters/Filter";
-import Sort from "./Sort";
 import { IData, IFilterCriterion } from "../data/Interfaces";
 import { applyFilter, setFilterOptions } from "./FilterLogic";
 import "./Store.css";
+import StoreBar from "./StoreBar";
 
 interface Params extends RouteComponentProps<{ type?: string }> {
   filter: any;
@@ -56,17 +55,13 @@ const Store: React.FC<Params> = props => {
 
   return (
     <div className="store">
-      <Filter
+      <StoreBar
         filter={props.filter}
         dispatch={props.dispatch}
         options={options}
         page={props.match.params.type}
       />
-      <div className="sort-product-window">
-        <h1>{props.match.params.type}</h1>
-        <Sort filter={props.filter} dispatch={props.dispatch} />
-        <ProductWindow products={products} type={props.match.params.type} />
-      </div>
+      <ProductWindow products={products} type={props.match.params.type} />
     </div>
   );
 };

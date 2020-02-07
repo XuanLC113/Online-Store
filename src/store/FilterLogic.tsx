@@ -28,8 +28,11 @@ function searchFilter(
 }
 
 function priceFilter(product: IProductData[], filter: IFilter): IProductData[] {
-  return product.filter(
-    item => item.price >= filter.price1 && item.price <= filter.price2
+  if (filter.price.length === 0) {
+    return product;
+  }
+  return product.filter(item =>
+    filter.price.some(range => item.price >= range[0] && item.price <= range[1])
   );
 }
 

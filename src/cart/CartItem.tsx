@@ -21,7 +21,7 @@ const CartItem = ({ item, reload }: Props) => {
   return (
     <div className="cart-item">
       <span className="cart-item-img">
-        <img src="https://via.placeholder.com/150" />
+        <img src={require(`../data/images/${item.product.image[0]}`)} />
       </span>
       <div className="cart-item-details">
         <p className="cart-item-title">{item.product.title}</p>

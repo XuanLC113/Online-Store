@@ -3,8 +3,7 @@ import { IFilter } from "../../data/Interfaces";
 type Action =
   | { type: "search"; payload: string | number }
   | { type: "sort"; payload: string }
-  | { type: "price1"; payload: number }
-  | { type: "price2"; payload: number }
+  | { type: "price"; payload: number[] }
   | { type: "feature"; payload: string }
   | { type: "brand"; payload: string }
   | { type: "color"; payload: string }
@@ -13,8 +12,7 @@ type Action =
 
 const filters: IFilter = {
   search: "",
-  price1: 0,
-  price2: 100,
+  price: [],
   sort: "alphabetical",
   filter: {
     feature: [],
@@ -32,22 +30,28 @@ function modify(arr: string[], value: string): string[] {
   return arr;
 }
 
+function modifyPrice(arr: number[][], value: number[]): number[][] {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0] === value[0]) {
+      arr.splice(i, 1);
+      return arr;
+    } else if (arr[i][0] > value[0]) {
+      arr.splice(i, 0, value);
+      return arr;
+    }
+  }
+  arr.push(value);
+  return arr;
+}
+
 function reducer(state: IFilter, action: Action): IFilter {
   switch (action.type) {
     case "search":
       return { ...state, search: action.payload };
     case "sort":
       return { ...state, sort: action.payload };
-    case "price1":
-      if (action.payload < state.price2) {
-        return { ...state, price1: action.payload };
-      }
-      return state;
-    case "price2":
-      if (state.price1 < action.payload) {
-        return { ...state, price2: action.payload };
-      }
-      return state;
+    case "price":
+      return { ...state, price: modifyPrice(state.price, action.payload) };
     case "feature":
       return {
         ...state,

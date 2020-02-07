@@ -16,17 +16,21 @@ const FilterTags = ({ filter, dispatch }: Props) => {
       );
     }
   }
+  for (let i of filter.price) {
+    tags.push(
+      <Tag key={i[0]} tag={i} filterKey={"price"} dispatch={dispatch} />
+    );
+  }
   return (
     <div className="filter-tags">
-      <div className="tag-header">
-        {tags.length !== 0 && (
-          <>
-            <h2>Tags: </h2>
-            <button onClick={() => dispatch({ type: "reset" })}>clear</button>
-          </>
-        )}
-      </div>
-      {tags}
+      {tags.length !== 0 ? (
+        <>
+          <div className="tags">{tags}</div>
+          <button onClick={() => dispatch({ type: "reset" })}>clear</button>
+        </>
+      ) : (
+        <div className="empty-filter-tag" />
+      )}
     </div>
   );
 };

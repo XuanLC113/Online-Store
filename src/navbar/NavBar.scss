@@ -1,13 +1,14 @@
 .navbar {
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   background: lightgrey;
   ul {
     display: flex;
     list-style-type: none;
     align-items: center;
     li {
-      padding: 1rem;
+      padding-right: 1rem;
       color: black;
+      cursor: default;
     }
     .link {
       text-decoration: none;
@@ -22,8 +23,8 @@
     .cart-badge {
       position: absolute;
       color: white;
-      right: 1.5rem;
-      top: 1rem;
+      top: 0.1rem;
+      right: 1.45rem;
     }
   }
 }
@@ -31,9 +32,35 @@
 .store-dropdown {
   position: absolute;
   display: flex;
-  justify-content: space-around;
   width: 100%;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 10rem;
   left: 0;
   z-index: 1;
+  margin-top: 1rem;
   background: white;
+  .link-earbud {
+    flex: 1;
+    background: url("../data/images/earphone-2639487__340.jpg");
+    background-position: center center;
+  }
+  .link-headphone {
+    flex: 1;
+    background: url("../data/images/headphones-690685__340.png");
+    background-position: center center;
+  }
+  .link-speaker {
+    flex: 1;
+    background: url("../data/images/speaker-319842__340.png");
+    background-position: center center;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    li {
+      align-self: center;
+      color: white;
+    }
+  }
 }

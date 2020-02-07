@@ -17,8 +17,7 @@ export interface IData {
 
 export type IFilter = {
   search: string | number;
-  price1: number;
-  price2: number;
+  price: number[][];
   sort: string;
   filter: {
     feature: string[];

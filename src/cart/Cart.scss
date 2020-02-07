@@ -8,6 +8,7 @@
   background: lightgray;
   border-radius: 1rem;
   padding: 2rem;
+  z-index: 1;
   .cart-list {
     flex: 3;
     max-height: 80%;
@@ -23,7 +24,11 @@
   margin-bottom: 2rem;
   .cart-item-img {
     display: inline-block;
-    width: auto;
+    img {
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
   }
   .cart-item-details {
     margin: 1rem;
@@ -59,7 +64,7 @@
     align-self: center;
     padding: 0.5rem 0;
     width: 100%;
-    background: lightpink;
+    background: dodgerblue;
     border: none;
     border-radius: 1rem;
   }

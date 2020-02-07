@@ -7,25 +7,44 @@ interface Props {
 }
 
 const FilterPrice = ({ filter, dispatch }: Props) => {
+  function check(range: number[]): boolean {
+    for (let i of filter.price) {
+      if (i[0] === range[0]) {
+        return true;
+      }
+    }
+    return false;
+  }
   return (
     <div className="filter-price">
-      <p>
-        ${filter.price1} - ${filter.price2}
-      </p>
-      <input
-        type="range"
-        min="0"
-        max="99"
-        value={filter.price1}
-        onChange={e => dispatch({ type: "price1", payload: e.target.value })}
-      />
-      <input
-        type="range"
-        min="1"
-        max="100"
-        value={filter.price2}
-        onChange={e => dispatch({ type: "price2", payload: e.target.value })}
-      />
+      <div
+        className="filter-inputs"
+        onClick={() => dispatch({ type: "price", payload: [0, 50] })}
+      >
+        <input type="checkbox" checked={check([0, 50])} />
+        <label key={1}>0 - 50</label>
+      </div>
+      <div
+        className="filter-inputs"
+        onClick={() => dispatch({ type: "price", payload: [51, 100] })}
+      >
+        <input type="checkbox" checked={check([51, 100])} />
+        <label key={1}>51 - 100</label>
+      </div>
+      <div
+        className="filter-inputs"
+        onClick={() => dispatch({ type: "price", payload: [101, 150] })}
+      >
+        <input type="checkbox" checked={check([101, 150])} />
+        <label key={1}>101 - 150</label>
+      </div>
+      <div
+        className="filter-inputs"
+        onClick={() => dispatch({ type: "price", payload: [151, 200] })}
+      >
+        <input type="checkbox" checked={check([151, 200])} />
+        <label key={1}>151 - 200</label>
+      </div>
     </div>
   );
 };
