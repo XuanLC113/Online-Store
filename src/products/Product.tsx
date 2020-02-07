@@ -36,8 +36,12 @@ const Product: React.FC<Props> = props => {
     }
   }, [props.match.params.id]);
 
-  function addToCart() {
-    modifyItem(product, color, 1);
+  function addToCart(count: number): void {
+    // for (let i = 0; i < count; i++) {
+    //   modifyItem(product, color, 1);
+    // }
+    modifyItem(product, color, count);
+
     props.reload();
   }
   return (

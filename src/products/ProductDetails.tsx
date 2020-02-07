@@ -6,7 +6,7 @@ interface Props {
   product: IProductData;
   color: string;
   setColor: Dispatch<SetStateAction<string>>;
-  addToCart: () => void;
+  addToCart: (count: number) => void | undefined;
 }
 
 const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
@@ -39,7 +39,7 @@ const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
               &gt;
             </button>
           </div>
-          <button onClick={addToCart}>add to cart</button>
+          <button onClick={() => addToCart(count)}>add to cart</button>
         </div>
         <p>features:</p>
         <ul>
@@ -48,8 +48,8 @@ const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
           ))}
         </ul>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-          repellendus.
+          description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Harum, repellendus.
         </p>
       </div>
     </div>

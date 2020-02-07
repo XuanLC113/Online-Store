@@ -27,7 +27,7 @@ function modifyItem(product: IProductData, color: string, count: number): void {
     };
     updateRequest.onsuccess = (e: any) => {
       if (e.target.result == null) {
-        let item: ICart = { product: product, color: color, qty: 1 };
+        let item: ICart = { product: product, color: color, qty: count };
         store.put(item, product.sku + color);
       } else {
         let data: ICart = e.target.result;
