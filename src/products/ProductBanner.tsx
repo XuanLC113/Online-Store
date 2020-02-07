@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
   images: string[];
 }
 
 const ProductBanner = ({ images }: Props) => {
-  console.log(images);
   const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prevState => (prevState + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images]);
   return (
     <div className="product-banner">
       {images.length === 0 ? null : (
