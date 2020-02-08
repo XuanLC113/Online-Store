@@ -1,0 +1,14 @@
+.tag {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 2px 5px;
+  background: lightblue;
+  p {
+    margin: 0 7px;
+  }
+}
+
+.tag:hover {
+  background: dodgerblue;
+}

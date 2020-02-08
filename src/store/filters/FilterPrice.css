@@ -1,0 +1,27 @@
+.filter-price {
+  position: relative;
+  margin: 0 0 4rem 0;
+}
+
+.filter-price p {
+  text-align: center;
+  margin: 1rem;
+}
+
+.filter-price input {
+  position: absolute;
+}
+
+.filter-price input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.filter-price input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.filter-price input[type="range"]:nth-child(1)::-webkit-slider-thumb {
+  z-index: 2;
+}
