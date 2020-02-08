@@ -6,13 +6,13 @@ const Home = () => {
   return (
     <div className="home">
       <ul>
-        <Link className="link link-earbud" to="/store/earbud">
+        <Link className="link link-earbud" to="/online-store/store/earbud">
           <li>Earbuds</li>
         </Link>
-        <Link className="link link-headphone" to="/store/headphone">
+        <Link className="link link-headphone" to="/online-store/store/headphone">
           <li>Headphones</li>
         </Link>
-        <Link className="link link-speaker" to="/store/speaker">
+        <Link className="link link-speaker" to="/online-store/store/speaker">
           <li>Speakers</li>
         </Link>
       </ul>
