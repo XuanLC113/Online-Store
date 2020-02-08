@@ -14,6 +14,11 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
   const [dropDown, setDropDown] = useState(false);
   const dropDownRef = useRef<HTMLDivElement>(null);
 
+  function enterLink(): void {
+    dispatch({ type: "reset" });
+    setDropDown(false);
+  }
+
   useEffect(() => {
     const handleClick = (e: any) => {
       if (dropDown && dropDownRef && !dropDownRef.current?.contains(e.target)) {
@@ -55,21 +60,21 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
             <Link
               className="link link-earbud"
               to="/store/earbud"
-              onClick={() => dispatch({ type: "reset" })}
+              onClick={() => enterLink()}
             >
               <li>Earbuds</li>
             </Link>
             <Link
               className="link link-headphone"
               to="/store/headphone"
-              onClick={() => dispatch({ type: "reset" })}
+              onClick={() => enterLink()}
             >
               <li>Headphones</li>
             </Link>
             <Link
               className="link link-speaker"
               to="/store/speaker"
-              onClick={() => dispatch({ type: "reset" })}
+              onClick={() => enterLink()}
             >
               <li>Speakers</li>
             </Link>
