@@ -9,7 +9,10 @@ const Home = () => {
         <Link className="link link-earbud" to="/online-store/store/earbud">
           <li>Earbuds</li>
         </Link>
-        <Link className="link link-headphone" to="/online-store/store/headphone">
+        <Link
+          className="link link-headphone"
+          to="/online-store/store/headphone"
+        >
           <li>Headphones</li>
         </Link>
         <Link className="link link-speaker" to="/online-store/store/speaker">
