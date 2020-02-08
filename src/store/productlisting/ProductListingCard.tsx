@@ -18,21 +18,24 @@ interface Props {
 }
 
 const ProductListingCard = ({ item, type }: Props) => {
-  const [image, setImage] = useState(item.image[0]);
+  const [index, setIndex] = useState(0);
   return (
     <div className="product-card">
       <Link className="link image-link" to={`/store/${type}/${item.sku}`}>
         <img
           className="product-card-image"
-          src={require(`../../data/images/${image}`)}
+          src={require(`../../data/images/${item.image[index]}`)}
         />
       </Link>
       <div>
-        {item.color.map((color, index) => (
+        {item.color.map((color, i) => (
           <span
-            style={{ background: color }}
+            style={{
+              background: color,
+              border: i === index ? "2px solid black" : "none"
+            }}
             className="color-picker"
-            onClick={() => setImage(item.image[index])}
+            onClick={() => setIndex(i)}
           />
         ))}
       </div>
