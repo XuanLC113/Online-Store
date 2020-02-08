@@ -37,21 +37,20 @@ const Product: React.FC<Props> = props => {
   }, [props.match.params.id]);
 
   function addToCart(count: number): void {
-    // for (let i = 0; i < count; i++) {
-    //   modifyItem(product, color, 1);
-    // }
     modifyItem(product, color, count);
 
     props.reload();
   }
   return (
     <div>
-      <button className="product-back" onClick={() => props.history.go(-1)}>
-        &lt; back
-      </button>
+      <div className="product-bar">
+        <button className="product-back" onClick={() => props.history.go(-1)}>
+          &lt; back
+        </button>
+      </div>
       <ProductDetails
         product={product}
-        color={color}
+        selectedColor={color}
         setColor={setColor}
         addToCart={addToCart}
       />

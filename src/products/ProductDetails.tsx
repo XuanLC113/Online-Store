@@ -4,28 +4,54 @@ import ProductBanner from "./ProductBanner";
 
 interface Props {
   product: IProductData;
-  color: string;
+  selectedColor: string;
   setColor: Dispatch<SetStateAction<string>>;
   addToCart: (count: number) => void | undefined;
 }
 
-const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
+const ProductDetails = ({
+  product,
+  selectedColor,
+  setColor,
+  addToCart
+}: Props) => {
   const [count, setCount] = useState(1);
   return (
     <div className="product-details">
       <ProductBanner images={product.image} />
-      <div className="product-description">
+      <div className="product-info">
         <h1>{product.title}</h1>
-        <p className="product-price">${product.price}</p>
-        <div className="color-selector">
-          <select value={color} onChange={e => setColor(e.target.value)}>
-            {product.color.map(color => (
-              <option key={color} value={color}>
-                {color}
-              </option>
+        <h2 className="product-price">${product.price}</h2>
+        <div className="product-features">
+          <h3>Features</h3>
+          <ul>
+            {product.feature.map(feature => (
+              <li>{feature}</li>
             ))}
-          </select>
+          </ul>
         </div>
+        <div className="product-description">
+          <h3>Description</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            qui eaque aliquam dolorem porro ab similique laboriosam aliquid
+            explicabo velit vero sunt, natus, numquam consequatur dolores
+            ducimus laborum et voluptatem?
+          </p>
+        </div>
+        <div className="color-selector">
+          <h3>Colors</h3>
+          {product.color.map(color => (
+            <span
+              style={{
+                background: color,
+                outline: color === selectedColor ? "2px solid black" : "none"
+              }}
+              onClick={() => setColor(color)}
+            />
+          ))}
+        </div>
+        <h3>Qty</h3>
         <div className="product-add">
           <div className="product-count">
             <button
@@ -34,23 +60,15 @@ const ProductDetails = ({ product, color, setColor, addToCart }: Props) => {
             >
               &lt;
             </button>
-            <p>{count}</p>
+            <input type="text" value={count} />
             <button onClick={() => setCount(prevState => prevState + 1)}>
               &gt;
             </button>
           </div>
-          <button onClick={() => addToCart(count)}>add to cart</button>
+          <button className="cart-add-button" onClick={() => addToCart(count)}>
+            add to cart
+          </button>
         </div>
-        <p>features:</p>
-        <ul>
-          {product.feature.map(feature => (
-            <li>{feature}</li>
-          ))}
-        </ul>
-        <p>
-          description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Harum, repellendus.
-        </p>
       </div>
     </div>
   );
