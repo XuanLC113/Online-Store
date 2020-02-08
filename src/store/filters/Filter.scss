@@ -3,7 +3,7 @@
   margin: 0 1rem;
   overflow: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 1px solid black;
   h2 {
     font-size: 1em;
@@ -16,7 +16,7 @@
     background: lightblue;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     .open-filter {
       display: flex;
       justify-content: space-between;
@@ -27,7 +27,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .filter-window {
     display: block;
   }

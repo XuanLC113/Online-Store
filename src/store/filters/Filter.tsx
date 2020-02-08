@@ -43,7 +43,7 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
     return window.removeEventListener("resize", resize);
   }, [window.innerWidth]);
 
-  if (windowSize <= 500) {
+  if (windowSize <= 600) {
     return (
       <div className="filter-window">
         <form>

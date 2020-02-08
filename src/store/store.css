@@ -22,3 +22,9 @@
   padding: 0.5rem 1rem;
   border-bottom: 1px solid black;
 }
+
+@media (max-width: 600px) {
+  .filter-bar h1 {
+    font-size: 1em;
+  }
+}

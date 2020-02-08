@@ -82,24 +82,32 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="App">
-        <NavBar
-          cartHandler={handleCart}
-          cartSize={cartSize}
-          dispatch={dispatch}
-        />
-        {cart && (
-          <Cart closeCart={handleCart} cartItems={cartItems} reload={reload} />
-        )}
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/store/:type" component={Store}>
-            <Store filter={filter} dispatch={dispatch} />
-          </Route>
-          <Route path="/store/:type/:id">
-            <Product reload={reload} />
-          </Route>
-        </Switch>
+      <div className="app">
+        <div className="app-bar">
+          <NavBar
+            cartHandler={handleCart}
+            cartSize={cartSize}
+            dispatch={dispatch}
+          />
+          {cart && (
+            <Cart
+              closeCart={handleCart}
+              cartItems={cartItems}
+              reload={reload}
+            />
+          )}
+        </div>
+        <div className="app-main">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/store/:type" component={Store}>
+              <Store filter={filter} dispatch={dispatch} />
+            </Route>
+            <Route path="/store/:type/:id">
+              <Product reload={reload} />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

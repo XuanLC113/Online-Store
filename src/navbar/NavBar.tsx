@@ -27,52 +27,55 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
   }, [dropDown]);
 
   return (
-    <div className="navbar">
-      <ul>
-        <Link
-          className="link nav-home"
-          to="/"
-          onClick={() => dispatch({ type: "reset" })}
-        >
-          <li>Home</li>
-        </Link>
-        <div onClick={() => setDropDown(prevState => !prevState)}>
-          <li className="link nav-store">Shop</li>
+    <div>
+      <div className="navbar">
+        <ul>
+          <Link
+            className="link nav-home"
+            to="/"
+            onClick={() => dispatch({ type: "reset" })}
+          >
+            <li>Home</li>
+          </Link>
+          <div onClick={() => setDropDown(prevState => !prevState)}>
+            <li className="link nav-store">Shop</li>
+          </div>
 
-          {dropDown && (
-            <div className="store-dropdown" ref={dropDownRef}>
-              <Link
-                className="link link-earbud"
-                to="/store/earbud"
-                onClick={() => dispatch({ type: "reset" })}
-              >
-                <li>Earbuds</li>
-              </Link>
-              <Link
-                className="link link-headphone"
-                to="/store/headphone"
-                onClick={() => dispatch({ type: "reset" })}
-              >
-                <li>Headphones</li>
-              </Link>
-              <Link
-                className="link link-speaker"
-                to="/store/speaker"
-                onClick={() => dispatch({ type: "reset" })}
-              >
-                <li>Speakers</li>
-              </Link>
-            </div>
-          )}
+          <li className="nav-cart" onClick={() => cartHandler()}>
+            {cartSize > 0 && <span className="cart-badge">{cartSize}</span>}
+            <span className="cart-icon">
+              <FontAwesomeIcon icon={faShoppingCart} />
+            </span>
+          </li>
+        </ul>
+      </div>
+      {dropDown && (
+        <div className="store-dropdown" ref={dropDownRef}>
+          <ul>
+            <Link
+              className="link link-earbud"
+              to="/store/earbud"
+              onClick={() => dispatch({ type: "reset" })}
+            >
+              <li>Earbuds</li>
+            </Link>
+            <Link
+              className="link link-headphone"
+              to="/store/headphone"
+              onClick={() => dispatch({ type: "reset" })}
+            >
+              <li>Headphones</li>
+            </Link>
+            <Link
+              className="link link-speaker"
+              to="/store/speaker"
+              onClick={() => dispatch({ type: "reset" })}
+            >
+              <li>Speakers</li>
+            </Link>
+          </ul>
         </div>
-
-        <li className="nav-cart" onClick={() => cartHandler()}>
-          {cartSize > 0 && <span className="cart-badge">{cartSize}</span>}
-          <span className="cart-icon">
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </span>
-        </li>
-      </ul>
+      )}
     </div>
   );
 };
