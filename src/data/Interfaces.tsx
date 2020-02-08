@@ -23,6 +23,7 @@ export type IFilter = {
     feature: string[];
     brand: string[];
     color: string[];
+    [key: string]: string[];
   };
 };
 

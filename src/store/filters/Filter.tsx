@@ -26,7 +26,6 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
   const [openBrand, setOpenBrand] = useState(false);
   const [openColor, setOpenColor] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
     setOpenFeature(false);
@@ -35,15 +34,7 @@ const Filter = ({ filter, dispatch, options, page }: Props) => {
     setOpenPrice(false);
   }, [page]);
 
-  useEffect(() => {
-    function resize() {
-      setWindowSize(window.innerWidth);
-    }
-    window.addEventListener("resize", resize);
-    return window.removeEventListener("resize", resize);
-  }, [window.innerWidth]);
-
-  if (windowSize <= 600) {
+  if (window.innerWidth <= 600) {
     return (
       <div className="filter-window">
         <form>

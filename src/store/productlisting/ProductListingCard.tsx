@@ -25,6 +25,7 @@ const ProductListingCard = ({ item, type }: Props) => {
         <img
           className="product-card-image"
           src={require(`../../data/images/${item.image[index]}`)}
+          alt="product-card"
         />
       </Link>
       <div>

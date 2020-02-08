@@ -2,6 +2,7 @@ import React, { Dispatch, useState, useEffect } from "react";
 import Filter from "./filters/Filter";
 import FilterTags from "./filters/FilterTags";
 import Sort from "./filters/Sort";
+import { IFilter } from "../data/Interfaces";
 
 interface FilterCriterion {
   feature: string[];
@@ -11,7 +12,7 @@ interface FilterCriterion {
 }
 
 interface Props {
-  filter: any;
+  filter: IFilter;
   dispatch: Dispatch<any>;
   options: FilterCriterion;
   page: string | undefined;
@@ -38,7 +39,7 @@ const StoreBar = ({ filter, dispatch, options, page }: Props) => {
     if (filter.price.length !== 0) {
       setFilterBar(true);
     }
-  }, [openFilter]);
+  }, [openFilter, filter]);
   return (
     <div className="store-bar">
       <div className="filter-bar">
