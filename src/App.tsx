@@ -99,11 +99,11 @@ const App: React.FC = () => {
         </div>
         <div className="app-main">
           <Switch>
-            <Route exact path="/online-store/" component={Home} />
-            <Route exact path="/online-store/store/:type" component={Store}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/store/:type" component={Store}>
               <Store filter={filter} dispatch={dispatch} />
             </Route>
-            <Route path="/online-store/store/:type/:id">
+            <Route path="/store/:type/:id">
               <Product reload={reload} />
             </Route>
           </Switch>

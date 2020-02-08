@@ -11,10 +11,6 @@ export interface IProductData {
   [key: string]: any;
 }
 
-export interface IData {
-  data: IProductData[];
-}
-
 export type IFilter = {
   search: string | number;
   price: number[][];

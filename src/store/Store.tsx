@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Dispatch } from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import * as products_data from "../data/products.json";
-import ProductWindow from "./productlisting/ProductListing";
-import { IData, IFilterCriterion } from "../data/Interfaces";
+import { IFilterCriterion, IProductData } from "../data/Interfaces";
 import { applyFilter, setFilterOptions } from "./FilterLogic";
-import "./Store.css";
+import "./store.css";
 import StoreBar from "./StoreBar";
+import ProductListing from "./productlisting/ProductListing";
 
 interface Params extends RouteComponentProps<{ type?: string }> {
   filter: any;
@@ -19,7 +19,7 @@ const initialFilterOptions: IFilterCriterion = {
 };
 
 const Store: React.FC<Params> = props => {
-  const { data }: IData = products_data;
+  const data: IProductData[] = products_data.data;
   const [products, setProducts] = useState(data);
   const [options, setOptions] = useState(initialFilterOptions);
 
@@ -61,7 +61,7 @@ const Store: React.FC<Params> = props => {
         options={options}
         page={props.match.params.type}
       />
-      <ProductWindow products={products} type={props.match.params.type} />
+      <ProductListing products={products} type={props.match.params.type} />
     </div>
   );
 };

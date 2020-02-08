@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as products_data from "../data/products.json";
 import { RouteComponentProps, withRouter } from "react-router";
-import { IProductData, IData } from "../data/Interfaces";
+import { IProductData } from "../data/Interfaces";
 import { modifyItem } from "../cart/CartLogic";
 import ProductDetails from "./ProductDetails";
 import "./Product.css";
@@ -27,7 +27,7 @@ const Product: React.FC<Props> = props => {
   const [color, setColor] = useState("");
 
   useEffect(() => {
-    const { data }: IData = products_data;
+    const data: IProductData[] = products_data.data;
     for (let item of data) {
       if (item.sku.toString() === props.match.params.id) {
         setProduct(item);
