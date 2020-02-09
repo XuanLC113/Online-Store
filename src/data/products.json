@@ -3,39 +3,43 @@
     {
       "id": 12,
       "sku": 12064273040195392,
-      "title": "earbud sleeved blue",
+      "title": "Round earbuds 1",
       "type": "earbud",
       "feature": ["wired", "soundcan"],
-      "brand": "jbl",
-      "color": ["blue"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Brand A",
+      "color": ["white", "black"],
+      "image": [
+        "earbuds-1808643__340.jpg",
+        "headphones-424163__340.jpg",
+        "desk-4308214__340.png"
+      ],
       "price": 10
     },
 
     {
       "id": 23,
       "sku": 12064273040195341,
-      "title": "earbud sleeved blue",
+      "title": "Round earbud 2",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
-      "brand": "jbl",
-      "color": ["blue", "red"],
-      "image": ["desk-4337465__340.png", "earbuds-983069__340.png"],
+      "feature": ["wired"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": ["earbuds-983069__340.png", "earphone-2639487__340.jpg"],
       "price": 10
     },
 
     {
       "id": 42,
       "sku": 12064273040195754,
-      "title": "earbud sleeved blue",
+      "title": "Soft Earbud 1",
       "type": "earbud",
       "feature": ["wired", "soundcan"],
-      "brand": "jbl",
-      "color": ["blue"],
+      "brand": "Brand B",
+      "color": ["white", "black"],
       "image": [
-        "earbuds-983069__340.png",
-        "headphone-159569__340.png",
-        "music-3693310__340.png"
+        "music-3693310__340.png",
+        "earphones-2602313__340.png",
+        "music-4479140__340.png"
       ],
       "price": 10
     },
@@ -43,168 +47,246 @@
     {
       "id": 53,
       "sku": 12064273040195936,
-      "title": "earbud sleeved blue",
+      "title": "Soft Earbud 2",
       "type": "earbud",
       "feature": ["wired", "soundcan"],
-      "brand": "jbl",
-      "color": ["blue"],
-      "image": ["headphone-159569__340.png"],
+      "brand": "Brand B",
+      "color": ["black"],
+      "image": ["desk-4337465__340.png", "music-4345603__340.png"],
       "price": 10
     },
 
     {
       "id": 26,
       "sku": 12064273040195017,
-      "title": "earbud sleeved blue",
+      "title": "Foam Earbud",
       "type": "earbud",
       "feature": ["wired", "soundcan"],
-      "brand": "jbl",
+      "brand": "Brand B",
       "color": ["blue"],
-      "image": ["music-3693310__340.png"],
+      "image": ["earphones-477446__340.png"],
       "price": 10
     },
 
     {
       "id": 98,
       "sku": 12064273037195392,
-      "title": "earbud sleeved blue",
+      "title": "Cylinder Earbud",
       "type": "earbud",
       "feature": ["wired", "soundcan"],
-      "brand": "jbl",
-      "color": ["blue"],
-      "image": ["photo-1520170350707-b2da59970118.png"],
+      "brand": "Brand B",
+      "color": ["black"],
+      "image": ["untie-earphone-1894727__340.png"],
       "price": 10
     },
 
     {
       "id": 13,
       "sku": 51498472915966366,
-      "title": "earbud sleeved black",
+      "title": "Apple AirPod",
       "type": "earbud",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["black"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["wireless"],
+      "brand": "Apple",
+      "color": ["white"],
+      "image": [
+        "photo-1505236273191-1dce886b01e9.png",
+        "photo-1511025998370-7d59f82e9c8f.png",
+        "photo-1511300961358-669ca3ad05af.png",
+        "photo-1526876798423-97e53fb23428.png"
+      ],
       "price": 20
     },
 
     {
       "id": 14,
       "sku": 10686354557628303,
-      "title": "earbud sleeved green",
+      "title": "Bubblegum Earbud",
       "type": "earbud",
-      "feature": ["wireless"],
-      "brand": "Sony",
-      "color": ["green"],
-      "image": ["desk-4308214__340.png"],
+      "feature": [""],
+      "brand": "Brand A",
+      "color": ["pink"],
+      "image": ["photo-1580605363912-8231f2ce440b.png"],
       "price": 30
     },
 
     {
       "id": 15,
       "sku": 11033926921508487,
-      "title": "earbud sleeved red black",
+      "title": "Compact Pill Buds",
       "type": "earbud",
-      "feature": ["wired"],
-      "brand": "monstercat",
-      "color": ["red", "black"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["wireless"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": [
+        "photo-1578319439584-104c94d37305.png",
+        "photo-1570993492903-ba4c3088f100.png"
+      ],
       "price": 40
     },
 
     {
       "id": 11,
       "sku": 39876704341265606,
-      "title": "long sleeved gray",
+      "title": "Round Buds",
       "type": "earbud",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["gray"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["wireless"],
+      "brand": "Brand B",
+      "color": ["black"],
+      "image": [
+        "photo-1564632516501-16af063d382f.png",
+        "photo-1564632516463-fd17f0bfdbff.png"
+      ],
       "price": 50
     },
 
     {
       "id": 16,
       "sku": 10412368723880253,
-      "title": "long sleeved plaid",
-      "type": "earbud",
+      "title": "Racer R",
+      "type": "headphone",
       "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["black"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Brand A",
+      "color": ["red", "black"],
+      "image": [
+        "photo-1565876480410-91009978e5b1.png",
+        "photo-1531860898813-8cecde84646c.png"
+      ],
       "price": 60
     },
 
     {
       "id": 0,
       "sku": 8552515751438644,
-      "title": "short sleeved black",
+      "title": "Beats Solo",
       "type": "headphone",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["black"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["over-ear"],
+      "brand": "Beats",
+      "color": ["gold", "white", "black"],
+      "image": [
+        "photo-1491024579037-7484729a4420.png",
+        "photo-1496957961599-e35b69ef5d7c.png",
+        "photo-1550635909-b14c20d9d525.png",
+        "photo-1516972238977-89271fb2bab8.png"
+      ],
       "price": 70
     },
 
     {
       "id": 1,
       "sku": 18644119330491312,
-      "title": "short sleeved blue",
+      "title": "Square headphones",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["over-ear"],
       "brand": "sony",
-      "color": ["blue"],
-      "image": ["desk-4308214__340.png"],
+      "color": ["black"],
+      "image": [
+        "headphone-3085681__340.png",
+        "headphone-1868615__340.png",
+        "headphone-1868612__340.png"
+      ],
       "price": 80
     },
 
     {
       "id": 2,
       "sku": 11854078013954528,
-      "title": "short sleeved red",
+      "title": "Bumble S",
       "type": "headphone",
       "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["red"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Brand B",
+      "color": ["black"],
+      "image": [
+        "photo-1505740420928-5e560c06d30e.png",
+        "photo-1505740106531-4243f3831c78.png"
+      ],
       "price": 90
     },
 
     {
       "id": 3,
       "sku": 876661122392077,
-      "title": "short sleeved gray",
+      "title": "Wood Headphone",
       "type": "headphone",
       "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["gray"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Brand C",
+      "color": ["brown"],
+      "image": ["photo-1481207801830-97f0f9a1337e.png"],
+      "price": 99
+    },
+    {
+      "id": 213,
+      "sku": 876661467392077,
+      "title": "Heavy Set",
+      "type": "headphone",
+      "feature": ["wired"],
+      "brand": "Brand C",
+      "color": ["black"],
+      "image": ["photo-1546435770-a3e426bf472b.png"],
+      "price": 99
+    },
+    {
+      "id": 19,
+      "sku": 876538122392077,
+      "title": "FRZ",
+      "type": "headphone",
+      "feature": ["wired"],
+      "brand": "Brand C",
+      "color": ["black"],
+      "image": ["headphones-690685__340.jpg"],
+      "price": 99
+    },
+    {
+      "id": 56,
+      "sku": 872341122392077,
+      "title": "RUV",
+      "type": "headphone",
+      "feature": ["wired"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": ["headphones-3683983__340.png"],
+      "price": 99
+    },
+
+    {
+      "id": 56,
+      "sku": 872341122392077,
+      "title": "TASQ",
+      "type": "headphone",
+      "feature": ["wired"],
+      "brand": "Brand C",
+      "color": ["silver", "black"],
+      "image": [
+        "photo-1487215078519-e21cc028cb29.png",
+        "photo-1520170350707-b2da59970118.png"
+      ],
       "price": 99
     },
 
     {
       "id": 4,
       "sku": 9197907543445677,
-      "title": "short sleeved plaid",
+      "title": "Regular Set",
       "type": "headphone",
       "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["plaid"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Brand B",
+      "color": ["tan", "black"],
+      "image": ["music-998228__340.png", "headphones-1720164__340.png"],
       "price": 15
     },
 
     {
       "id": 5,
       "sku": 10547961582846888,
-      "title": "singlet black",
-      "type": "speaker",
+      "title": "MDR",
+      "type": "headphone",
       "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["black"],
-      "image": ["desk-4308214__340.png"],
+      "brand": "Sony",
+      "color": ["pink", "white", "black"],
+      "image": [
+        "headphones-2592263__340.png",
+        "pink-2569355__340.jpg",
+        "music-2694489__340.png"
+      ],
       "price": 25
     },
 
