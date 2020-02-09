@@ -28,13 +28,15 @@ const CartItem = ({ item, reload }: Props) => {
       </span>
       <div className="cart-item-details">
         <p className="cart-item-title">{item.product.title}</p>
-        <p className="cart-item-color">color: {item.color}</p>
+        <p className="cart-item-color">
+          color: <b>{item.color}</b>
+        </p>
         <p className="cart-item-price">${item.product.price}</p>
         <div className="cart-item-qty">
           <button onClick={() => modifyCartItem(-1)} disabled={item.qty === 1}>
             -
           </button>
-          <p>{item.qty}</p>
+          <input type="text" value={item.qty} />
           <button onClick={() => modifyCartItem(1)}>+</button>
         </div>
         <button className="cart-item-delete" onClick={() => deleteCartItem()}>
