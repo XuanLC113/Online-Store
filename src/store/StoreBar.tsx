@@ -1,6 +1,6 @@
 import React, { Dispatch, useState, useEffect } from "react";
 import Filter from "./filters/Filter";
-import FilterTags from "./filters/FilterTags";
+import FilterTags from "./filters/filtertags/FilterTags";
 import Sort from "./filters/Sort";
 import { IFilter } from "../data/Interfaces";
 

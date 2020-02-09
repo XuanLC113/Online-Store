@@ -1,11 +1,11 @@
 import React, { useState, Dispatch, useEffect } from "react";
-import FilterSearch from "./FilterSearch";
-import FilterFeature from "./FilterFeature";
-import FilterColor from "./FilterColor";
-import FilterBrand from "./FilterBrand";
-import FilterPrice from "./FilterPrice";
+import FilterSearch from "./filteroptions/FilterSearch";
+import FilterFeature from "./filteroptions/FilterFeature";
+import FilterColor from "./filteroptions/FilterColor";
+import FilterBrand from "./filteroptions/FilterBrand";
+import FilterPrice from "./filteroptions/FilterPrice";
 import "./Filter.css";
-import OpenFilter from "./OpenFilter";
+import OpenFilter from "./filteroptions/OpenFilter";
 
 interface FilterCriterion {
   feature: string[];

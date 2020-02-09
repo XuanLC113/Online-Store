@@ -1,5 +1,4 @@
 import React, { Dispatch } from "react";
-import "./FilterPrice.css";
 
 interface Props {
   filter: any;
