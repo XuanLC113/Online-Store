@@ -1,6 +1,6 @@
 # Ecommerce Website
 
-view the site here: [https://xuanlc113.github.io/online-store](https://xuanlc113.github.io/online-store)
+view the site here: [https://xuanlc113.github.io/#/online-store](https://xuanlc113.github.io/#/online-store)
 
 Desktop and Mobile(600px)
 
