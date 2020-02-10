@@ -3,7 +3,7 @@ import { RouteComponentProps, withRouter } from "react-router";
 import * as products_data from "../data/products.json";
 import { IFilterCriterion, IProductData } from "../data/Interfaces";
 import { applyFilter, setFilterOptions } from "./FilterLogic";
-import "./store.css";
+import "./Store.css";
 import StoreBar from "./StoreBar";
 import ProductListing from "./productlisting/ProductListing";
 
