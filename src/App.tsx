@@ -81,7 +81,7 @@ const App: React.FC = () => {
   }, [reloadCart]);
 
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/online-store">
       <div className="app">
         <div className="app-bar">
           <NavBar
