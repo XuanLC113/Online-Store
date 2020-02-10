@@ -1,11 +1,43 @@
 {
   "data": [
     {
+      "id": 13,
+      "sku": 51498472915966366,
+      "title": "Apple AirPod",
+      "type": "earbud",
+      "feature": ["Bluetooth"],
+      "brand": "Apple",
+      "color": ["white"],
+      "image": [
+        "photo-1505236273191-1dce886b01e9.png",
+        "photo-1511025998370-7d59f82e9c8f.png",
+        "photo-1511300961358-669ca3ad05af.png",
+        "photo-1526876798423-97e53fb23428.png"
+      ],
+      "price": 199
+    },
+
+    {
+      "id": 56,
+      "sku": 872341122392077,
+      "title": "Beoplay E6",
+      "type": "earbud",
+      "feature": ["Extra Bass", "High-Resolution Audio"],
+      "brand": "Bang & Olufsen",
+      "color": ["black"],
+      "image": [
+        "photo-1563233369-77fa0d00e284.jpg",
+        "photo-1563235093-61ae4d633bab.jpg"
+      ],
+      "price": 159
+    },
+
+    {
       "id": 12,
       "sku": 12064273040195392,
-      "title": "Round earbuds 1",
+      "title": "PHG-98",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
+      "feature": ["High-Resolution Audio"],
       "brand": "Brand A",
       "color": ["white", "black"],
       "image": [
@@ -13,27 +45,27 @@
         "headphones-424163__340.jpg",
         "desk-4308214__340.png"
       ],
-      "price": 10
+      "price": 75
     },
 
     {
       "id": 23,
       "sku": 12064273040195341,
-      "title": "Round earbud 2",
+      "title": "YBI-87",
       "type": "earbud",
-      "feature": ["wired"],
+      "feature": ["Extra Bass"],
       "brand": "Brand A",
       "color": ["black"],
       "image": ["earbuds-983069__340.png", "earphone-2639487__340.jpg"],
-      "price": 10
+      "price": 60
     },
 
     {
       "id": 42,
       "sku": 12064273040195754,
-      "title": "Soft Earbud 1",
+      "title": "AST-236G",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
+      "feature": [],
       "brand": "Brand B",
       "color": ["white", "black"],
       "image": [
@@ -47,111 +79,102 @@
     {
       "id": 53,
       "sku": 12064273040195936,
-      "title": "Soft Earbud 2",
+      "title": "SOF-7320",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
+      "feature": [],
+      "brand": "Brand B",
+      "color": ["grey"],
+      "image": ["photo-1551996756-7305f665af11.jpg"],
+      "price": 15
+    },
+    {
+      "id": 553,
+      "sku": 12064273370195936,
+      "title": "IB-30Z",
+      "type": "earbud",
+      "feature": ["Extra Bass"],
       "brand": "Brand B",
       "color": ["black"],
       "image": ["desk-4337465__340.png", "music-4345603__340.png"],
-      "price": 10
+      "price": 20
     },
 
     {
       "id": 26,
       "sku": 12064273040195017,
-      "title": "Foam Earbud",
+      "title": "FFR-2934",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
+      "feature": [],
       "brand": "Brand B",
       "color": ["blue"],
       "image": ["earphones-477446__340.png"],
-      "price": 10
+      "price": 35
     },
 
     {
       "id": 98,
       "sku": 12064273037195392,
-      "title": "Cylinder Earbud",
+      "title": "CYL843",
       "type": "earbud",
-      "feature": ["wired", "soundcan"],
+      "feature": ["Extra Bass"],
       "brand": "Brand B",
       "color": ["black"],
       "image": ["untie-earphone-1894727__340.png"],
-      "price": 10
-    },
-
-    {
-      "id": 13,
-      "sku": 51498472915966366,
-      "title": "Apple AirPod",
-      "type": "earbud",
-      "feature": ["wireless"],
-      "brand": "Apple",
-      "color": ["white"],
-      "image": [
-        "photo-1505236273191-1dce886b01e9.png",
-        "photo-1511025998370-7d59f82e9c8f.png",
-        "photo-1511300961358-669ca3ad05af.png",
-        "photo-1526876798423-97e53fb23428.png"
-      ],
-      "price": 20
+      "price": 175
     },
 
     {
       "id": 14,
       "sku": 10686354557628303,
-      "title": "Bubblegum Earbud",
+      "title": "BBG-792",
       "type": "earbud",
-      "feature": [""],
+      "feature": [],
       "brand": "Brand A",
       "color": ["pink"],
       "image": ["photo-1580605363912-8231f2ce440b.png"],
-      "price": 30
+      "price": 45
     },
 
     {
       "id": 15,
       "sku": 11033926921508487,
-      "title": "Compact Pill Buds",
+      "title": "KRS82",
       "type": "earbud",
-      "feature": ["wireless"],
+      "feature": ["Bluetooth"],
       "brand": "Brand A",
       "color": ["black"],
       "image": [
         "photo-1578319439584-104c94d37305.png",
         "photo-1570993492903-ba4c3088f100.png"
       ],
-      "price": 40
+      "price": 140
     },
 
     {
       "id": 11,
       "sku": 39876704341265606,
-      "title": "Round Buds",
+      "title": "RNF-23I",
       "type": "earbud",
-      "feature": ["wireless"],
+      "feature": ["Bluetooth"],
       "brand": "Brand B",
       "color": ["black"],
       "image": [
         "photo-1564632516501-16af063d382f.png",
         "photo-1564632516463-fd17f0bfdbff.png"
       ],
-      "price": 50
+      "price": 150
     },
 
     {
-      "id": 16,
-      "sku": 10412368723880253,
-      "title": "Racer R",
-      "type": "headphone",
-      "feature": ["wired"],
+      "id": 61,
+      "sku": 872341122740267,
+      "title": "HTY-983",
+      "type": "earbud",
+      "feature": ["Bluetooth"],
       "brand": "Brand A",
-      "color": ["red", "black"],
-      "image": [
-        "photo-1565876480410-91009978e5b1.png",
-        "photo-1531860898813-8cecde84646c.png"
-      ],
-      "price": 60
+      "color": ["black"],
+      "image": ["photo-1536435316746-a0b5a1665819.jpg"],
+      "price": 129
     },
 
     {
@@ -159,7 +182,7 @@
       "sku": 8552515751438644,
       "title": "Beats Solo",
       "type": "headphone",
-      "feature": ["over-ear"],
+      "feature": ["Bluetooth", "Noise Cancelling", "Over-Ear", "Extra Bass"],
       "brand": "Beats",
       "color": ["gold", "white", "black"],
       "image": [
@@ -168,118 +191,122 @@
         "photo-1550635909-b14c20d9d525.png",
         "photo-1516972238977-89271fb2bab8.png"
       ],
-      "price": 70
+      "price": 199
     },
 
     {
-      "id": 1,
-      "sku": 18644119330491312,
-      "title": "Square headphones",
+      "id": 16,
+      "sku": 10412368723880253,
+      "title": "IFN-8234",
       "type": "headphone",
-      "feature": ["over-ear"],
-      "brand": "sony",
-      "color": ["black"],
+      "feature": ["On-Ear"],
+      "brand": "Brand A",
+      "color": ["red", "black"],
       "image": [
-        "headphone-3085681__340.png",
-        "headphone-1868615__340.png",
-        "headphone-1868612__340.png"
+        "photo-1565876480410-91009978e5b1.png",
+        "photo-1531860898813-8cecde84646c.png"
       ],
-      "price": 80
+      "price": 70
     },
 
     {
       "id": 2,
       "sku": 11854078013954528,
-      "title": "Bumble S",
+      "title": "AHC73",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["Bluetooth", "Noise Cancelling", "Over-Ear"],
       "brand": "Brand B",
       "color": ["black"],
       "image": [
         "photo-1505740420928-5e560c06d30e.png",
         "photo-1505740106531-4243f3831c78.png"
       ],
-      "price": 90
+      "price": 149
     },
 
     {
       "id": 3,
       "sku": 876661122392077,
-      "title": "Wood Headphone",
+      "title": "WRD-23",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["Bluetooth", "Noise Cancelling", "Over-Ear"],
       "brand": "Brand C",
       "color": ["brown"],
       "image": ["photo-1481207801830-97f0f9a1337e.png"],
-      "price": 99
+      "price": 129
     },
     {
       "id": 213,
       "sku": 876661467392077,
-      "title": "Heavy Set",
+      "title": "HVY0-01",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["Bluetooth", "Over-Ear"],
       "brand": "Brand C",
       "color": ["black"],
       "image": ["photo-1546435770-a3e426bf472b.png"],
-      "price": 99
+      "price": 49
     },
     {
       "id": 19,
       "sku": 876538122392077,
-      "title": "FRZ",
+      "title": "FRZ-67",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["Over-Ear", "Extra Bass"],
       "brand": "Brand C",
       "color": ["black"],
       "image": ["headphones-690685__340.jpg"],
       "price": 99
     },
-    {
-      "id": 56,
-      "sku": 872341122392077,
-      "title": "RUV",
-      "type": "headphone",
-      "feature": ["wired"],
-      "brand": "Brand A",
-      "color": ["black"],
-      "image": ["headphones-3683983__340.png"],
-      "price": 99
-    },
 
     {
-      "id": 56,
-      "sku": 872341122392077,
-      "title": "TASQ",
+      "id": 53,
+      "sku": 872341122399057,
+      "title": "TAS-834",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["Bluetooth", "On-Ear"],
       "brand": "Brand C",
       "color": ["silver", "black"],
       "image": [
         "photo-1487215078519-e21cc028cb29.png",
         "photo-1520170350707-b2da59970118.png"
       ],
-      "price": 99
+      "price": 79
     },
 
     {
       "id": 4,
       "sku": 9197907543445677,
-      "title": "Regular Set",
+      "title": "REG-123",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["On-Ear", "Extra Bass"],
       "brand": "Brand B",
       "color": ["tan", "black"],
       "image": ["music-998228__340.png", "headphones-1720164__340.png"],
-      "price": 15
+      "price": 115
+    },
+
+    {
+      "id": 1,
+      "sku": 18644119330491312,
+      "title": "NSK-239i",
+      "type": "headphone",
+      "feature": ["Noise Cancelling", "Over-Ear"],
+      "brand": "Marshall",
+      "color": ["black"],
+      "image": [
+        "headphone-3085681__340.png",
+        "headphone-1868615__340.png",
+        "headphone-1868612__340.png"
+      ],
+      "price": 180
     },
 
     {
       "id": 5,
       "sku": 10547961582846888,
-      "title": "MDR",
+      "title": "MDR-32",
       "type": "headphone",
-      "feature": ["wired"],
+      "feature": ["On-Ear"],
       "brand": "Sony",
       "color": ["pink", "white", "black"],
       "image": [
@@ -287,55 +314,152 @@
         "pink-2569355__340.jpg",
         "music-2694489__340.png"
       ],
+      "price": 125
+    },
+
+    {
+      "id": 9,
+      "sku": 11600983276356165,
+      "title": "QRT-1283",
+      "type": "speaker",
+      "feature": ["Bluetooth", "Waterproof"],
+      "brand": "Brand A",
+      "color": ["blue", "white", "black"],
+      "image": [
+        "photo-1520860100614-a714deb4805f.png",
+        "photo-1574740122205-1dd8019e443b.png",
+        "photo-1529359744902-86b2ab9edaea.png"
+      ],
+      "price": 75
+    },
+
+    {
+      "id": 57,
+      "sku": 11645653087636165,
+      "title": "KDVW-2435",
+      "type": "speaker",
+      "feature": ["WiFi", "Bluetooth", "High-Resolution Audio"],
+      "brand": "Brand B",
+      "color": ["red", "white", "black"],
+      "image": [
+        "photo-1507646227500-4d389b0012be.png",
+        "photo-1511842745775-b366af36db2a.png",
+        "photo-1530545002211-21753020f4c8.png",
+        "photo-1510766315117-0f791eb90af7.png"
+      ],
+      "price": 175
+    },
+
+    {
+      "id": 58,
+      "sku": 11602383276465165,
+      "title": "YRL-832",
+      "type": "speaker",
+      "feature": [],
+      "brand": "Brand C",
+      "color": ["Black"],
+      "image": ["photo-1568888623582-1cd743505931.png"],
+      "price": 135
+    },
+
+    {
+      "id": 39,
+      "sku": 13740983276356165,
+      "title": "ULH-2139",
+      "type": "speaker",
+      "feature": ["Extra Bass"],
+      "brand": "Brand B",
+      "color": ["green"],
+      "image": ["photo-1544704784-75dc323b9c73.png"],
       "price": 25
+    },
+
+    {
+      "id": 37,
+      "sku": 11600983284356165,
+      "title": "VNH-034",
+      "type": "speaker",
+      "feature": ["Bluetooth", "High-Resolution Audio"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": [
+        "photo-1542193810-9007c21cd37e.png",
+        "photo-1549400854-b4300f444934.png"
+      ],
+      "price": 99
+    },
+
+    {
+      "id": 365,
+      "sku": 11600983375356165,
+      "title": "HUB-034",
+      "type": "speaker",
+      "feature": ["Bluetooth", "Waterproof"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": ["photo-1570676771716-a059813514b8.png"],
+      "price": 199
+    },
+
+    {
+      "id": 310,
+      "sku": 15230983375356165,
+      "title": "HUB-134",
+      "type": "speaker",
+      "feature": ["High-Resolution Audio"],
+      "brand": "Brand A",
+      "color": ["black"],
+      "image": ["speaker-319842__340.png", "speaker-319841__340.png"],
+      "price": 87
     },
 
     {
       "id": 6,
       "sku": 6090484789343891,
-      "title": "singlet blue",
+      "title": "JBL Flip",
       "type": "speaker",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["blue"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["Bluetooth", "Waterproof"],
+      "brand": "JBL",
+      "color": ["red", "black", "white", "blue", "pink"],
+      "image": [
+        "photo-1558537348-c0f8e733989d.png",
+        "photo-1578487228055-3ce7712d8ff3.png",
+        "photo-1561930661-20c9650e3e25.jpg",
+        "speakers-4109274__340.jpg",
+        "speakers-4109274__3401.jpg"
+      ],
       "price": 35
     },
 
     {
       "id": 7,
       "sku": 18532669286405342,
-      "title": "singlet red",
+      "title": "Sonos Play 3",
       "type": "speaker",
-      "feature": ["wired"],
-      "brand": "beats",
-      "color": ["red"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["WiFi", "Bluetooth", "High-Resolution Audio"],
+      "brand": "Sonos",
+      "color": ["white"],
+      "image": [
+        "photo-1511499271651-073325718d90.png",
+        "photo-1511500689707-95c63a1fd769.png"
+      ],
       "price": 45
     },
 
     {
       "id": 8,
       "sku": 5619496040738316,
-      "title": "singlet green",
+      "title": "Sonos Move",
       "type": "speaker",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["green"],
-      "image": ["desk-4308214__340.png"],
+      "feature": ["WiFi", "Bluetooth", "Built-in Voice Control"],
+      "brand": "Sonos",
+      "color": ["black"],
+      "image": [
+        "photo-1570676770859-137ffa9e6b73.png",
+        "photo-1570676771334-66deb4b0e7c7.png",
+        "photo-1570676771375-b64465bfce92.png"
+      ],
       "price": 55
-    },
-
-    {
-      "id": 9,
-      "sku": 11600983276356165,
-      "title": "singlet gray",
-      "type": "speaker",
-      "feature": ["wired"],
-      "brand": "jbl",
-      "color": ["gray"],
-      "image": ["desk-4308214__340.png"],
-      "price": 75
     }
   ]
 }
