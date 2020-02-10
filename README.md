@@ -13,15 +13,15 @@ Desktop and Mobile(600px)
 
 ## Details
 
-- created entirely with react hooks
+Created entirely with react hooks
 
 ### Cart
 
-- Cart details recorded with IndexedDB
+Cart details recorded with IndexedDB
 
 ### Filters
 
-- Filter details recorded with LocalStorage and useReducer hook
+Filter details recorded with LocalStorage and useReducer hook
 
 ### CSS
 
