@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useReducer } from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { openDB } from "./cart/CartLogic";
 import { ICart, IFilter } from "./data/Interfaces";
 import { filters, reducer } from "./store/filters/FilterReducer";
@@ -81,7 +81,7 @@ const App: React.FC = () => {
   }, [reloadCart]);
 
   return (
-    <Router>
+    <HashRouter basename="/">
       <div className="app">
         <div className="app-bar">
           <NavBar
@@ -99,17 +99,17 @@ const App: React.FC = () => {
         </div>
         <div className="app-main">
           <Switch>
-            <Route exact path="/online-store" component={Home} />
-            <Route exact path="/online-store/store/:type" component={Store}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/store/:type" component={Store}>
               <Store filter={filter} dispatch={dispatch} />
             </Route>
-            <Route path="/online-store/store/:type/:id">
+            <Route path="/store/:type/:id">
               <Product reload={reload} />
             </Route>
           </Switch>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 

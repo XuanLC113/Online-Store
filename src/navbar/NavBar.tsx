@@ -37,7 +37,7 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
         <ul>
           <Link
             className="link nav-home"
-            to="/online-store"
+            to="/"
             onClick={() => dispatch({ type: "reset" })}
           >
             <li>Home</li>
@@ -59,21 +59,21 @@ const NavBar = ({ cartSize, cartHandler, dispatch }: Props) => {
           <ul>
             <Link
               className="link link-earbud"
-              to="/online-store/store/earbud"
+              to="/store/earbud"
               onClick={() => enterLink()}
             >
               <li>Earbuds</li>
             </Link>
             <Link
               className="link link-headphone"
-              to="/online-store/store/headphone"
+              to="/store/headphone"
               onClick={() => enterLink()}
             >
               <li>Headphones</li>
             </Link>
             <Link
               className="link link-speaker"
-              to="/online-store/store/speaker"
+              to="/store/speaker"
               onClick={() => enterLink()}
             >
               <li>Speakers</li>
