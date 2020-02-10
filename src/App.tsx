@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useReducer } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { openDB } from "./cart/CartLogic";
 import { ICart, IFilter } from "./data/Interfaces";
 import { filters, reducer } from "./store/filters/FilterReducer";
