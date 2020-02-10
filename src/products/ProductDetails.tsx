@@ -25,9 +25,11 @@ const ProductDetails = ({
         <div className="product-features">
           <h3>Features</h3>
           <ul>
-            {product.feature.map(feature => (
-              <li>{feature}</li>
-            ))}
+            {product.feature.length !== 0 ? (
+              product.feature.map(feature => <li>{feature}</li>)
+            ) : (
+              <li>no features</li>
+            )}
           </ul>
         </div>
         <div className="product-description">
