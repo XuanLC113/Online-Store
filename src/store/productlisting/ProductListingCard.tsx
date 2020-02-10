@@ -21,10 +21,7 @@ const ProductListingCard = ({ item, type }: Props) => {
   const [index, setIndex] = useState(0);
   return (
     <div className="product-card">
-      <Link
-        className="link image-link"
-        to={`/online-store/store/${type}/${item.sku}`}
-      >
+      <Link className="link image-link" to={`/store/${type}/${item.sku}`}>
         <img
           className="product-card-image"
           src={require(`../../data/images/${item.image[index]}`)}
